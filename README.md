@@ -33,8 +33,8 @@ mosquitto-mqtt:
    > **1.** enter into *boot* partition 
    > **2.** create empty file _ssh.txt_ or _ssh_
    > **3.** SSH :
-     `login : _nipi` 
-     ` password: unipi.technology` 
+     - `login : unipi` 
+     - ` password: unipi.technology` 
 
 -----------------------------------------------------
 
