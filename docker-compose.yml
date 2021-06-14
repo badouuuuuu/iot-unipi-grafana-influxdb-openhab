@@ -2,10 +2,10 @@ version: "2.2"
 
 services:
   openhab:
-    image: "openhab/openhab:snapshot-debian"
+    image: "openhab/openhab:3.1.0-snapshot-debian"
     container_name: openhab
     restart: always
-    network_mode: host
+    #network_mode: host
     volumes:
       # If you are on Windows delete the /etc/localtime and /etc/timezone lines
       - "/etc/localtime:/etc/localtime:ro"
@@ -20,10 +20,11 @@ services:
       GROUP_ID: ${GID}
       EXTRA_JAVA_OPTS: "-Duser.timezone=Europe/Berlin"
     ports:
-      - "8080:8080"
+      - "8082:8080"
       - "8443:8443"
+
   influxdb:
-    image: influxdb:latest
+    image: influxdb:1.8.6
     container_name: influxdb
     restart: always
     network_mode: host

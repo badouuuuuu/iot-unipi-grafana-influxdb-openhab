@@ -1,7 +1,7 @@
 ## How to access:
 ---
 - Portainer: http://localhost:9000
-- OpenHab: http://localhost:8080
+- OpenHab: http://localhost:8082
 - Grafana: http://localhost:3000
 - Influxdb: 
     ```yml
