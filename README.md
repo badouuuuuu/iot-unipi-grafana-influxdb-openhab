@@ -1,24 +1,24 @@
 ## How to access:
 ---
-Portainer: http://localhost:9000
-OpenHab: http://localhost:8080
-Grafana: http://localhost:3000
-Influxdb: 
-```yml
-    ports:
-      - "8083:8083"
-      - "8086:8086"
-      - "8090:8090"
-      - "25826:25826/udp"
-      - "2003:2003"
-```
+- Portainer: http://localhost:9000
+- OpenHab: http://localhost:8080
+- Grafana: http://localhost:3000
+- Influxdb: 
+    ```yml
+        ports:
+        - "8083:8083"
+        - "8086:8086"
+        - "8090:8090"
+        - "25826:25826/udp"
+        - "2003:2003"
+    ```
 
-mosquitto-mqtt: 
-```yml
-    ports:
-      - "1883:1883"
-      - "9001:9001"
-```
+- mosquitto-mqtt: 
+    ```yml
+        ports:
+        - "1883:1883"
+        - "9001:9001"
+    ```
 
 --------------------------------------------------
 ## Create SDCard for Unipi Neuron S103
