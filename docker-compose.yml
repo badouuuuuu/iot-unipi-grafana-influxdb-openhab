@@ -1,0 +1,97 @@
+version: "2.2"
+
+services:
+  openhab:
+    image: "openhab/openhab:3.1.0-snapshot-alpine"
+    container_name: openhab
+    restart: always
+    network_mode: host
+    volumes:
+      # If you are on Windows delete the /etc/localtime and /etc/timezone lines
+      - "/etc/localtime:/etc/localtime:ro"
+      - "/etc/timezone:/etc/timezone:ro"
+      - "./volumes/openhab/openhab_addons:/openhab/addons"
+      - "./volumes/openhab/openhab_conf:/openhab/conf"
+      - "./volumes/openhab/openhab_userdata:/openhab/userdata"
+    environment:
+      OPENHAB_HTTP_PORT: "8080"
+      OPENHAB_HTTPS_PORT: "8443"
+      USER_ID: ${UID}
+      GROUP_ID: ${GID}
+      EXTRA_JAVA_OPTS: "-Duser.timezone=Europe/Berlin"
+    ports:
+      - "8080:8080"
+      - "8443:8443"
+  influxdb:
+    image: influxdb:latest
+    container_name: influxdb
+    restart: always
+    network_mode: host
+    ports:
+      - "8083:8083"
+      - "8086:8086"
+      - "8090:8090"
+      - "25826:25826/udp"
+      - "2003:2003"
+    env_file:
+      # Check the file to set default password!
+      - "./config/env.influxdb"
+    volumes:
+      - "./volumes/influxdb/data:/var/lib/influxdb/"
+  grafana:
+    image: grafana/grafana:latest
+    container_name: grafana
+    restart: always
+    network_mode: host
+    user: root
+    ports:
+      - "3000:3000"
+    env_file:
+      - "./config/env.grafana"
+    volumes:
+      - "./volumes/grafana/data:/var/lib/grafana/"
+
+#   nodered:
+#     # If you are running on RaspBerryPi change the image to
+#     # nodered/node-red-docker:rpi
+#     image: nodered/node-red:latest
+#     container_name: nodered
+#     restart: always
+#     network_mode: host
+#     user: root
+#     ports:
+#       - "1880:1880"
+#     volumes:
+#       - ./nodered:/data
+  mosquitto:
+    image: eclipse-mosquitto:latest
+    container_name: mosquitto
+    restart: always
+    network_mode: host
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+
+    volumes:
+      - "./config/mosquitto/conf:/mosquitto/config/"
+      - "./volumes/mosquitto/data/:/mosquitto/data/"
+
+
+  portainer:
+    container_name: portainer
+    image: portainer/portainer-ce
+    restart: unless-stopped
+    command: -H unix:///var/run/docker.sock
+    ports:
+      - 9000:9000
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      - /etc/localtime:/etc/localtime:ro
+      - /etc/timezone:/etc/timezone:ro
+      - dataportainer:/data
+    labels: # for traefik, delete this if not needed
+      traefik.enable: true
+      traefik.http.routers.portainer-http.entrypoints: web
+      traefik.http.routers.portainer.rule: Host(`portainer.czs.local`)
+volumes:
+  dataportainer:

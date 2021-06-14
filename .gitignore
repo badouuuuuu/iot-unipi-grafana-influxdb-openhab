@@ -1,0 +1,4 @@
+back.yml
+/config/openhab/openhab_addons
+/config/openhab/openhab_userdata
+volumes
