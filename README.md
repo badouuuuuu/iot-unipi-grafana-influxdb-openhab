@@ -50,6 +50,7 @@ sudo curl -sSL https://get.docker.com | sh
  sudo reboot now
 ```
 
+-----------------------------------------------------
 
 ### start docker stack
 
