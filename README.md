@@ -46,6 +46,7 @@ sudo curl -sSL https://get.docker.com | sh
 ### Add user Unipi in docker group :
 
 ```
+ sudo usermod -aG docker unipi
  sudo gpasswd -a unipi docker
  sudo reboot now
 ```
