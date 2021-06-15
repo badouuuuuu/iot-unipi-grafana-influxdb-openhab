@@ -2,33 +2,19 @@
     {
         "id": "d7bc3fab.7a4e8",
         "type": "tab",
-        "label": "UniPi - Original",
-        "disabled": true,
-        "info": ""
-    },
-    {
-        "id": "9896f883.a15a6",
-        "type": "tab",
-        "label": "UniPi - Tweak",
+        "label": "UniPi - InfluxDb",
         "disabled": false,
         "info": ""
     },
     {
-        "id": "14a538d3.c817bf",
+        "id": "559ca316.e374e4",
         "type": "tab",
-        "label": "Zigbee - CC2532 Ti",
+        "label": "DHT22",
         "disabled": false,
-        "info": ""
+        "info": "Fake Temps"
     },
     {
-        "id": "2fbd42c0.d038ae",
-        "type": "tab",
-        "label": "fake temp",
-        "disabled": false,
-        "info": ""
-    },
-    {
-        "id": "8dd57283.d7602",
+        "id": "c889e48f.c0de78",
         "type": "subflow",
         "name": "Network Map (4)",
         "info": "",
@@ -37,7 +23,7 @@
         "out": []
     },
     {
-        "id": "beb6d09d.90147",
+        "id": "3a74a16f.932a2e",
         "type": "subflow",
         "name": "Pairing Notifications (5)",
         "info": "",
@@ -46,7 +32,7 @@
         "out": []
     },
     {
-        "id": "70dc33e2.ff6b8c",
+        "id": "18ee9ac0.54c68d",
         "type": "subflow",
         "name": "Devices (5)",
         "info": "",
@@ -55,7 +41,7 @@
         "out": []
     },
     {
-        "id": "12f9e98.5a8e317",
+        "id": "18d05b79.6c7a45",
         "type": "subflow",
         "name": "Status (5)",
         "info": "",
@@ -64,7 +50,7 @@
         "out": []
     },
     {
-        "id": "9a69d1a3.7d6db",
+        "id": "dddfc13c.2ef78",
         "type": "subflow",
         "name": "Logging Level (5)",
         "info": "",
@@ -73,7 +59,7 @@
         "out": []
     },
     {
-        "id": "15e83bbb.0c767c",
+        "id": "85fda48f.62176",
         "type": "subflow",
         "name": "Remove Device (5)",
         "info": "",
@@ -82,7 +68,7 @@
         "out": []
     },
     {
-        "id": "89c7559f.91ddd8",
+        "id": "6df79dc.ad07a64",
         "type": "subflow",
         "name": "Permit Join (5)",
         "info": "",
@@ -91,7 +77,7 @@
         "out": []
     },
     {
-        "id": "90a28baa.e90c08",
+        "id": "477a9344.f72e0c",
         "type": "subflow",
         "name": "Rename Device (5)",
         "info": "",
@@ -155,10 +141,10 @@
         "hidden": false
     },
     {
-        "id": "d5951e14.94c918",
+        "id": "d0d6034f.68aa08",
         "type": "mqtt-broker",
         "name": "",
-        "broker": "localhost",
+        "broker": "192.168.0.72",
         "port": "1883",
         "clientid": "",
         "usetls": false,
@@ -180,93 +166,85 @@
         "sessionExpiry": ""
     },
     {
-        "id": "7b6d37d6.824578",
-        "type": "zigbee2mqtt-server",
-        "name": "zigbee",
-        "host": "localhost",
-        "mqtt_port": "1883",
-        "mqtt_username": "",
-        "mqtt_password": "",
-        "tls": "",
-        "usetls": false,
-        "base_topic": "zigbee2mqtt"
-    },
-    {
-        "id": "922741d3.52d3d8",
+        "id": "26288e28.8a640a",
         "type": "ui_group",
-        "z": "70dc33e2.ff6b8c",
+        "z": "18ee9ac0.54c68d",
         "name": "Devices",
-        "tab": "2dc431ad.ce14e6",
+        "tab": "7e255ed3.2ae7c",
         "order": 1,
         "disp": true,
         "width": "12",
         "collapse": false
     },
     {
-        "id": "1614803.0311b8",
+        "id": "be1f9c0f.6d6678",
         "type": "ui_group",
         "name": "Status",
-        "tab": "2dc431ad.ce14e6",
+        "tab": "7e255ed3.2ae7c",
         "order": 2,
         "disp": true,
         "width": "6",
         "collapse": false
     },
     {
-        "id": "7999538b.d14d44",
+        "id": "7d0addf5.4408dc",
         "type": "ui_group",
-        "z": "9a69d1a3.7d6db",
+        "z": "dddfc13c.2ef78",
         "name": "Logging Level",
-        "tab": "2dc431ad.ce14e6",
+        "tab": "7e255ed3.2ae7c",
         "order": 4,
         "disp": true,
         "width": "6",
         "collapse": false
     },
     {
-        "id": "6b6b475c.92b0e",
+        "id": "b8cb423d.374858",
         "type": "ui_group",
-        "z": "15e83bbb.0c767c",
+        "z": "85fda48f.62176",
         "name": "Remove Device",
-        "tab": "2dc431ad.ce14e6",
+        "tab": "7e255ed3.2ae7c",
         "order": 5,
         "disp": true,
         "width": "6",
         "collapse": false
     },
     {
-        "id": "478d3769.9df438",
+        "id": "51e22a63.c42a14",
         "type": "ui_group",
         "name": "Permit Join",
-        "tab": "2dc431ad.ce14e6",
+        "tab": "7e255ed3.2ae7c",
         "order": 3,
         "disp": true,
         "width": "6",
         "collapse": false
     },
     {
-        "id": "ac815b94.7e1e68",
+        "id": "fa659648.8a149",
         "type": "mqtt-broker",
         "name": "",
-        "broker": "192.168.0.5",
-        "port": "8883",
-        "tls": "7a82d31e.ab407c",
+        "broker": "192.168.0.72",
+        "port": "1883",
+        "tls": "da0933cb.bfe83",
         "clientid": "",
         "usetls": true,
-        "compatmode": true,
+        "protocolVersion": "4",
         "keepalive": "15",
         "cleansession": true,
         "birthTopic": "",
         "birthQos": "0",
         "birthPayload": "",
+        "birthMsg": {},
         "closeTopic": "",
         "closePayload": "",
+        "closeMsg": {},
         "willTopic": "",
         "willQos": "0",
-        "willPayload": ""
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
     },
     {
-        "id": "7a82d31e.ab407c",
+        "id": "da0933cb.bfe83",
         "type": "tls-config",
         "name": "",
         "cert": "",
@@ -279,31 +257,43 @@
         "verifyservercert": false
     },
     {
-        "id": "159c11ae.4dd906",
+        "id": "3d736442.beff1c",
         "type": "ui_group",
         "name": "Rename Device",
-        "tab": "2dc431ad.ce14e6",
+        "tab": "7e255ed3.2ae7c",
         "order": 6,
         "disp": true,
         "width": "6",
         "collapse": false
     },
     {
-        "id": "2dc431ad.ce14e6",
+        "id": "7e255ed3.2ae7c",
         "type": "ui_tab",
         "name": "Zigbee2MQTT Admin Panel",
         "icon": "dashboard"
     },
     {
-        "id": "c21ccac0.37f0a8",
+        "id": "f9c582a6.f5609",
+        "type": "zigbee2mqtt-server",
+        "name": "zigbee",
+        "host": "localhost",
+        "mqtt_port": "1883",
+        "mqtt_username": "",
+        "mqtt_password": "",
+        "tls": "",
+        "usetls": false,
+        "base_topic": "zigbee2mqtt"
+    },
+    {
+        "id": "b832d5e6.69526",
         "type": "influxdb",
-        "hostname": "localhost",
+        "hostname": "192.168.0.72",
         "port": "8086",
         "protocol": "http",
         "database": "unipi_openhab_db",
         "name": "iot-influxdb",
         "usetls": false,
-        "tls": "7a82d31e.ab407c",
+        "tls": "da0933cb.bfe83",
         "influxdbVersion": "1.x",
         "url": "http://localhost:8086",
         "rejectUnauthorized": true
@@ -315,8 +305,8 @@
         "name": "",
         "server": "",
         "client": "6455e978.240c88",
-        "x": 1580,
-        "y": 620,
+        "x": 1600,
+        "y": 880,
         "wires": []
     },
     {
@@ -330,16 +320,16 @@
         "y": 260,
         "wires": [
             [
-                "10f927f3.0a7678",
-                "1e2588f7.210637",
                 "27f27c55.7132b4",
                 "8f03fb48.c2cca8",
                 "d40c6834.a6eb18",
                 "e67ee568.e015b8",
                 "f373cbc3.fc6a28",
                 "bd9a4c80.96771",
+                "c5d7384d.07d608",
+                "1e2588f7.210637",
                 "ec20cd63.a0eea",
-                "c5d7384d.07d608"
+                "10f927f3.0a7678"
             ]
         ]
     },
@@ -354,8 +344,8 @@
         "property": "value",
         "seedev": "0",
         "seecirc": "0",
-        "x": 571,
-        "y": 260,
+        "x": 550,
+        "y": 240,
         "wires": [
             [
                 "5a705260.e7825c"
@@ -382,7 +372,8 @@
         "y": 620,
         "wires": [
             [
-                "b47228e5.b3db58"
+                "b47228e5.b3db58",
+                "ef9df281.fdb8a"
             ]
         ]
     },
@@ -414,52 +405,6 @@
         "wires": [
             [
                 "110586b9.e39229"
-            ]
-        ]
-    },
-    {
-        "id": "cd482ee8.b2a2f",
-        "type": "ui_gauge",
-        "z": "d7bc3fab.7a4e8",
-        "name": "AI 1.1",
-        "group": "c1ff5163.f3269",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "gtype": "gage",
-        "title": "AI 1.1",
-        "label": "V",
-        "format": "{{value}}",
-        "min": 0,
-        "max": 10,
-        "colors": [
-            "#00b500",
-            "#e6e600",
-            "#ca3838"
-        ],
-        "seg1": "4",
-        "seg2": "6",
-        "x": 1050,
-        "y": 420,
-        "wires": []
-    },
-    {
-        "id": "1e2588f7.210637",
-        "type": "unipi-input",
-        "z": "d7bc3fab.7a4e8",
-        "name": "AI 1.1",
-        "alias": "",
-        "devices": "ai",
-        "circuits": "1.01",
-        "property": "value",
-        "seedev": "0",
-        "seecirc": "0",
-        "seeorig": "0",
-        "x": 570,
-        "y": 420,
-        "wires": [
-            [
-                "16b49c7a.51c764"
             ]
         ]
     },
@@ -513,22 +458,6 @@
         ]
     },
     {
-        "id": "16b49c7a.51c764",
-        "type": "function",
-        "z": "d7bc3fab.7a4e8",
-        "name": "Round 2 decimals",
-        "func": "return {payload: Math.round(msg.payload * 100) / 100}",
-        "outputs": 1,
-        "noerr": 0,
-        "x": 810,
-        "y": 420,
-        "wires": [
-            [
-                "cd482ee8.b2a2f"
-            ]
-        ]
-    },
-    {
         "id": "5a705260.e7825c",
         "type": "function",
         "z": "d7bc3fab.7a4e8",
@@ -536,8 +465,11 @@
         "func": "return {payload: (msg.payload ? \"ON\" : \"OFF\")}",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 790,
-        "y": 260,
+        "y": 240,
         "wires": [
             [
                 "48f47e09.18384"
@@ -663,25 +595,6 @@
         "wires": []
     },
     {
-        "id": "ec20cd63.a0eea",
-        "type": "unipi-input",
-        "z": "d7bc3fab.7a4e8",
-        "name": "DI 1.4",
-        "alias": "",
-        "devices": "input",
-        "circuits": "1.04",
-        "property": "value",
-        "seedev": "0",
-        "seecirc": "0",
-        "x": 570,
-        "y": 380,
-        "wires": [
-            [
-                "51c00d2a.40ea54"
-            ]
-        ]
-    },
-    {
         "id": "51c00d2a.40ea54",
         "type": "function",
         "z": "d7bc3fab.7a4e8",
@@ -689,6 +602,9 @@
         "func": "return {payload: (msg.payload ? \"ON\" : \"OFF\")}",
         "outputs": 1,
         "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
         "x": 789,
         "y": 380,
         "wires": [
@@ -696,22 +612,6 @@
                 "b937a609.f53998"
             ]
         ]
-    },
-    {
-        "id": "b937a609.f53998",
-        "type": "ui_text",
-        "z": "d7bc3fab.7a4e8",
-        "group": "420ea789.f9e278",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "DI 1.4",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 1049,
-        "y": 380,
-        "wires": []
     },
     {
         "id": "48159b42.7c72c4",
@@ -733,7 +633,8 @@
         "y": 680,
         "wires": [
             [
-                "b47228e5.b3db58"
+                "b47228e5.b3db58",
+                "cf8b50a6.54082"
             ]
         ]
     },
@@ -788,7 +689,8 @@
         "y": 740,
         "wires": [
             [
-                "b47228e5.b3db58"
+                "b47228e5.b3db58",
+                "c9b3b2a3.29afd8"
             ]
         ]
     },
@@ -843,7 +745,8 @@
         "y": 800,
         "wires": [
             [
-                "b47228e5.b3db58"
+                "b47228e5.b3db58",
+                "5863dc17.498d44"
             ]
         ]
     },
@@ -926,9 +829,6 @@
         "func": "return {payload: (msg.payload == 1 ? true : false)}",
         "outputs": 1,
         "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
         "x": 790,
         "y": 620,
         "wires": [
@@ -1071,8 +971,8 @@
         "z": "d7bc3fab.7a4e8",
         "name": "Input section",
         "info": "Reading from websocket channel provided by Evok\nFiltering only the messages for given IO\nFormatting the value to be displayed in the UI\nDisplaying in the UI",
-        "x": 590,
-        "y": 200,
+        "x": 870,
+        "y": 80,
         "wires": []
     },
     {
@@ -1081,124 +981,243 @@
         "z": "d7bc3fab.7a4e8",
         "name": "Output section",
         "info": "Reading the current state of the IOs\nFormatting the value to be used as an input for UI\nDisplaying the value in UI\nSending the value back to the Evok",
-        "x": 590,
-        "y": 560,
+        "x": 830,
+        "y": 520,
         "wires": []
     },
     {
-        "id": "3e451a31.021a2e",
-        "type": "websocket out",
-        "z": "9896f883.a15a6",
+        "id": "b982a0a1.57a708",
+        "type": "debug",
+        "z": "d7bc3fab.7a4e8",
         "name": "",
-        "server": "",
-        "client": "6455e978.240c88",
-        "x": 1840,
-        "y": 1300,
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1890,
+        "y": 620,
         "wires": []
     },
     {
-        "id": "de942133.ec01",
-        "type": "websocket in",
-        "z": "9896f883.a15a6",
+        "id": "ef9df281.fdb8a",
+        "type": "json",
+        "z": "d7bc3fab.7a4e8",
         "name": "",
-        "server": "",
-        "client": "6455e978.240c88",
-        "x": 600,
-        "y": 280,
+        "property": "payload",
+        "action": "obj",
+        "pretty": true,
+        "x": 1530,
+        "y": 620,
         "wires": [
             [
-                "c3789f91.cda678",
-                "75ec3940.98315",
-                "1a4f5e81.11de31",
-                "ae1c9891.9d11f",
-                "c6147a7a.7926b8",
-                "69be72ef.abecf4",
-                "a3f8f5e7.2c982",
-                "e37ac39e.5d1de",
-                "8623262a.ad68d",
-                "ba25fa29.727b"
+                "8b2e5358.bc4ac8"
             ]
         ]
     },
     {
-        "id": "ba25fa29.727b",
-        "type": "unipi-input",
-        "z": "9896f883.a15a6",
-        "name": "DI 1.1",
-        "alias": "",
-        "devices": "input",
-        "circuits": "1.01",
-        "property": "value",
-        "seedev": "0",
-        "seecirc": "0",
-        "x": 1110,
-        "y": 240,
-        "wires": [
-            [
-                "5c2fd6d1.1a5af8"
-            ]
-        ]
-    },
-    {
-        "id": "1510a61.8d4ae5a",
-        "type": "unipi-output",
-        "z": "9896f883.a15a6",
-        "name": "DO 1.1",
-        "cmd": "set",
-        "alias": "",
-        "devices": "relay_do",
-        "circuits": "1.01",
-        "enableFil": "1",
-        "inputFil": "",
-        "relayFil": "",
-        "digoutFil": "",
-        "analoutFil": "",
-        "analinFil": "",
-        "ledFil": "",
-        "x": 1460,
-        "y": 880,
-        "wires": [
-            [
-                "3e451a31.021a2e",
-                "6a8b54f2.e52034"
-            ]
-        ]
-    },
-    {
-        "id": "35cb64e5.6ede94",
-        "type": "ui_switch",
-        "z": "9896f883.a15a6",
+        "id": "8b2e5358.bc4ac8",
+        "type": "function",
+        "z": "d7bc3fab.7a4e8",
         "name": "",
-        "label": "DO 1.1",
-        "tooltip": "",
-        "group": "147012f0.fc1afd",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "x": 1060,
-        "y": 880,
+        "func": "let timestamp = Math.round(+new Date() / 1000);\n\nmsg.payload = { \n    cmd: msg.payload[\"cmd\"],\n    dev: msg.payload[\"dev\"],\n    circuit: msg.payload[\"circuit\"],\n    value: msg.payload[\"value\"],\n    name: \"lights bedroom\",\n    unipi_name: \"Digital Output 1.01\",\n    timestamp: timestamp\n    \n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1680,
+        "y": 620,
         "wires": [
             [
-                "1510a61.8d4ae5a"
+                "b982a0a1.57a708",
+                "e650a48e.42d678"
             ]
         ]
     },
     {
-        "id": "a47775aa.aea93",
+        "id": "f5fa7649.29c7b8",
+        "type": "debug",
+        "z": "d7bc3fab.7a4e8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1890,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "cf8b50a6.54082",
+        "type": "json",
+        "z": "d7bc3fab.7a4e8",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": true,
+        "x": 1530,
+        "y": 680,
+        "wires": [
+            [
+                "383d613f.6950a6"
+            ]
+        ]
+    },
+    {
+        "id": "383d613f.6950a6",
+        "type": "function",
+        "z": "d7bc3fab.7a4e8",
+        "name": "",
+        "func": "let timestamp = Math.round(+new Date() / 1000);\n\nmsg.payload = { \n    cmd: msg.payload[\"cmd\"],\n    dev: msg.payload[\"dev\"],\n    circuit: msg.payload[\"circuit\"],\n    value: msg.payload[\"value\"],\n    name: \"lights bedroom\",\n    unipi_name: \"Digital Output 1.02\",\n    timestamp: timestamp\n    \n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1680,
+        "y": 680,
+        "wires": [
+            [
+                "f5fa7649.29c7b8",
+                "e650a48e.42d678"
+            ]
+        ]
+    },
+    {
+        "id": "ca16e1e5.69dcd",
+        "type": "debug",
+        "z": "d7bc3fab.7a4e8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1890,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "c9b3b2a3.29afd8",
+        "type": "json",
+        "z": "d7bc3fab.7a4e8",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": true,
+        "x": 1530,
+        "y": 740,
+        "wires": [
+            [
+                "1b4a6947.d1360f"
+            ]
+        ]
+    },
+    {
+        "id": "1b4a6947.d1360f",
+        "type": "function",
+        "z": "d7bc3fab.7a4e8",
+        "name": "",
+        "func": "let timestamp = Math.round(+new Date() / 1000);\n\nmsg.payload = { \n    cmd: msg.payload[\"cmd\"],\n    dev: msg.payload[\"dev\"],\n    circuit: msg.payload[\"circuit\"],\n    value: msg.payload[\"value\"],\n    name: \"Outdoor Lights\",\n    unipi_name: \"Digital Output 1.03\",\n    timestamp: timestamp\n    \n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1680,
+        "y": 740,
+        "wires": [
+            [
+                "ca16e1e5.69dcd",
+                "e650a48e.42d678"
+            ]
+        ]
+    },
+    {
+        "id": "4a2b1f9b.b58458",
+        "type": "debug",
+        "z": "d7bc3fab.7a4e8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1890,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "5863dc17.498d44",
+        "type": "json",
+        "z": "d7bc3fab.7a4e8",
+        "name": "",
+        "property": "payload",
+        "action": "obj",
+        "pretty": true,
+        "x": 1530,
+        "y": 800,
+        "wires": [
+            [
+                "39f8a77c.4b3588"
+            ]
+        ]
+    },
+    {
+        "id": "39f8a77c.4b3588",
+        "type": "function",
+        "z": "d7bc3fab.7a4e8",
+        "name": "",
+        "func": "let timestamp = Math.round(+new Date() / 1000);\n\nmsg.payload = { \n    cmd: msg.payload[\"cmd\"],\n    dev: msg.payload[\"dev\"],\n    circuit: msg.payload[\"circuit\"],\n    value: msg.payload[\"value\"],\n    name: \"Garage Lights\",\n    unipi_name: \"Digital Output 1.04\",\n    timestamp: timestamp\n    \n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1680,
+        "y": 800,
+        "wires": [
+            [
+                "4a2b1f9b.b58458",
+                "e650a48e.42d678"
+            ]
+        ]
+    },
+    {
+        "id": "ff7f2b77.f2973",
+        "type": "debug",
+        "z": "d7bc3fab.7a4e8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": true,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 1040,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "cd482ee8.b2a2f",
         "type": "ui_gauge",
-        "z": "9896f883.a15a6",
+        "z": "d7bc3fab.7a4e8",
         "name": "AI 1.1",
         "group": "c1ff5163.f3269",
         "order": 0,
@@ -1217,14 +1236,30 @@
         ],
         "seg1": "4",
         "seg2": "6",
-        "x": 1610,
-        "y": 400,
+        "x": 1050,
+        "y": 420,
         "wires": []
     },
     {
-        "id": "c3789f91.cda678",
+        "id": "16b49c7a.51c764",
+        "type": "function",
+        "z": "d7bc3fab.7a4e8",
+        "name": "Round 2 decimals",
+        "func": "return {payload: Math.round(msg.payload * 100) / 100}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 810,
+        "y": 420,
+        "wires": [
+            [
+                "cd482ee8.b2a2f"
+            ]
+        ]
+    },
+    {
+        "id": "1e2588f7.210637",
         "type": "unipi-input",
-        "z": "9896f883.a15a6",
+        "z": "d7bc3fab.7a4e8",
         "name": "AI 1.1",
         "alias": "",
         "devices": "ai",
@@ -1233,842 +1268,37 @@
         "seedev": "0",
         "seecirc": "0",
         "seeorig": "0",
-        "x": 1110,
+        "x": 570,
         "y": 420,
         "wires": [
             [
-                "5e56d49d.9c3204"
+                "16b49c7a.51c764"
             ]
         ]
     },
     {
-        "id": "48aac1e1.313498",
-        "type": "ui_slider",
-        "z": "9896f883.a15a6",
-        "name": "",
-        "label": "AO 1.1",
-        "tooltip": "",
-        "group": "476c4d26.7f5c34",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "outs": "all",
-        "topic": "",
-        "min": 0,
-        "max": 10,
-        "step": "0.1",
-        "x": 1060,
-        "y": 1140,
-        "wires": [
-            [
-                "b8102117.8d89"
-            ]
-        ]
-    },
-    {
-        "id": "b8102117.8d89",
-        "type": "unipi-output",
-        "z": "9896f883.a15a6",
-        "name": "AO 1.1",
-        "cmd": "set",
-        "alias": "",
-        "devices": "ao",
-        "circuits": "1.01",
-        "enableFil": "1",
-        "inputFil": "",
-        "relayFil": "",
-        "digoutFil": "",
-        "analoutFil": "",
-        "analinFil": "",
-        "ledFil": "",
-        "x": 1340,
-        "y": 1140,
-        "wires": [
-            [
-                "3e451a31.021a2e"
-            ]
-        ]
-    },
-    {
-        "id": "5e56d49d.9c3204",
-        "type": "function",
-        "z": "9896f883.a15a6",
-        "name": "Round 2 decimals",
-        "func": "var analog_output = \"AI 1.1\"\nvar options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };\nvar today  = new Date();\nvar date = today.toLocaleDateString(\"fr-FR\", options);\nvar timestamp = new Date().getTime();\n\nmsg.temperature = {\n    analog_output : analog_output,\n    timestamp: Date(Date.now()),\n    temps: Math.round(msg.payload * 100) / 100 \n} \n\n\nreturn msg\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "// Code added here will be run once\n// whenever the node is started.return {payload: Math.round(msg.payload * 100) / 100}\n",
-        "finalize": "",
-        "libs": [],
-        "x": 1330,
-        "y": 420,
-        "wires": [
-            [
-                "a47775aa.aea93",
-                "ed7c94b7.98c1d"
-            ]
-        ]
-    },
-    {
-        "id": "5c2fd6d1.1a5af8",
-        "type": "function",
-        "z": "9896f883.a15a6",
-        "name": "To ON/OFF",
-        "func": "var digital_input = \"1.1\"\nvar options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };\nvar today  = new Date();\nvar date = today.toLocaleDateString(\"fr-FR\", options);\nvar timestamp = new Date().getTime();\n\nmsg.temperature = {\n    status: msg.value,\n    digital_input : digital_input,\n    timestamp: Date(Date.now()),\n\n} \n\n\nreturn msg\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1329,
-        "y": 240,
-        "wires": [
-            [
-                "6e80d78f.e77f08",
-                "ed7c94b7.98c1d",
-                "77f2482d.bf369"
-            ]
-        ]
-    },
-    {
-        "id": "6e80d78f.e77f08",
-        "type": "ui_text",
-        "z": "9896f883.a15a6",
-        "group": "420ea789.f9e278",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "DI 1.1",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 1589,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "69be72ef.abecf4",
-        "type": "unipi-input",
-        "z": "9896f883.a15a6",
-        "name": "DI 1.2",
-        "alias": "",
-        "devices": "input",
-        "circuits": "1.02",
-        "property": "value",
-        "seedev": "0",
-        "seecirc": "0",
-        "x": 1109,
-        "y": 280,
-        "wires": [
-            [
-                "c6ab5108.5d25f8"
-            ]
-        ]
-    },
-    {
-        "id": "c6ab5108.5d25f8",
-        "type": "function",
-        "z": "9896f883.a15a6",
-        "name": "To ON/OFF",
-        "func": "var digital_input = \"1.2\"\nvar options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };\nvar today  = new Date();\nvar date = today.toLocaleDateString(\"fr-FR\", options);\nvar timestamp = new Date().getTime();\n\nmsg.temperature = {\n    status: msg.value,\n    digital_input : digital_input,\n    timestamp: Date(Date.now()),\n\n} \n\n\nreturn msg\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1330,
-        "y": 280,
-        "wires": [
-            [
-                "e7ed6029.849e68",
-                "ed7c94b7.98c1d",
-                "77f2482d.bf369"
-            ]
-        ]
-    },
-    {
-        "id": "e7ed6029.849e68",
-        "type": "ui_text",
-        "z": "9896f883.a15a6",
-        "group": "420ea789.f9e278",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "DI 1.2",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 1588,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "a3f8f5e7.2c982",
-        "type": "unipi-input",
-        "z": "9896f883.a15a6",
-        "name": "DI 1.3",
-        "alias": "",
-        "devices": "input",
-        "circuits": "1.03",
-        "property": "value",
-        "seedev": "0",
-        "seecirc": "0",
-        "x": 1109,
-        "y": 320,
-        "wires": [
-            [
-                "b3a7be66.cbfe78"
-            ]
-        ]
-    },
-    {
-        "id": "b3a7be66.cbfe78",
-        "type": "function",
-        "z": "9896f883.a15a6",
-        "name": "To ON/OFF",
-        "func": "var digital_input = \"1.3\"\nvar options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };\nvar today  = new Date();\nvar date = today.toLocaleDateString(\"fr-FR\", options);\nvar timestamp = new Date().getTime();\n\nmsg.temperature = {\n    status: msg.value,\n    digital_input : digital_input,\n    timestamp: Date(Date.now()),\n\n} \n\n\nreturn msg\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1328,
-        "y": 320,
-        "wires": [
-            [
-                "c66493e6.665c5",
-                "ed7c94b7.98c1d"
-            ]
-        ]
-    },
-    {
-        "id": "c66493e6.665c5",
-        "type": "ui_text",
-        "z": "9896f883.a15a6",
-        "group": "420ea789.f9e278",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "DI 1.3",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 1588,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "e37ac39e.5d1de",
-        "type": "unipi-input",
-        "z": "9896f883.a15a6",
-        "name": "DI 1.4",
-        "alias": "",
-        "devices": "input",
-        "circuits": "1.04",
-        "property": "value",
-        "seedev": "0",
-        "seecirc": "0",
-        "x": 1109,
-        "y": 360,
-        "wires": [
-            [
-                "72b6327c.7db744"
-            ]
-        ]
-    },
-    {
-        "id": "72b6327c.7db744",
-        "type": "function",
-        "z": "9896f883.a15a6",
-        "name": "To ON/OFF",
-        "func": "var digital_input = \"1.4\"\nvar options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };\nvar today  = new Date();\nvar date = today.toLocaleDateString(\"fr-FR\", options);\nvar timestamp = new Date().getTime();\n\nmsg.temperature = {\n    status: msg.value,\n    digital_input : digital_input,\n    timestamp: Date(Date.now()),\n\n} \n\n\nreturn msg\n",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1328,
-        "y": 360,
-        "wires": [
-            [
-                "df9b9030.22b498",
-                "ed7c94b7.98c1d"
-            ]
-        ]
-    },
-    {
-        "id": "df9b9030.22b498",
-        "type": "ui_text",
-        "z": "9896f883.a15a6",
-        "group": "420ea789.f9e278",
-        "order": 1,
-        "width": 0,
-        "height": 0,
-        "name": "",
-        "label": "DI 1.4",
-        "format": "{{msg.payload}}",
-        "layout": "row-spread",
-        "x": 1588,
-        "y": 360,
-        "wires": []
-    },
-    {
-        "id": "b0bb2fff.7b9ed8",
-        "type": "unipi-output",
-        "z": "9896f883.a15a6",
-        "name": "DO 1.2",
-        "cmd": "set",
-        "alias": "",
-        "devices": "relay_do",
-        "circuits": "1.02",
-        "enableFil": "1",
-        "inputFil": "",
-        "relayFil": "",
-        "digoutFil": "",
-        "analoutFil": "",
-        "analinFil": "",
-        "ledFil": "",
-        "x": 1460,
-        "y": 940,
-        "wires": [
-            [
-                "3e451a31.021a2e",
-                "6a8b54f2.e52034"
-            ]
-        ]
-    },
-    {
-        "id": "f767c864.a3cb98",
-        "type": "ui_switch",
-        "z": "9896f883.a15a6",
-        "name": "",
-        "label": "DO 1.2",
-        "tooltip": "",
-        "group": "147012f0.fc1afd",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "x": 1060,
-        "y": 940,
-        "wires": [
-            [
-                "b0bb2fff.7b9ed8"
-            ]
-        ]
-    },
-    {
-        "id": "474435bd.b17e84",
-        "type": "unipi-output",
-        "z": "9896f883.a15a6",
-        "name": "DO 1.3",
-        "cmd": "set",
-        "alias": "",
-        "devices": "relay_do",
-        "circuits": "1.03",
-        "enableFil": "1",
-        "inputFil": "",
-        "relayFil": "",
-        "digoutFil": "",
-        "analoutFil": "",
-        "analinFil": "",
-        "ledFil": "",
-        "x": 1460,
-        "y": 1000,
-        "wires": [
-            [
-                "3e451a31.021a2e",
-                "6a8b54f2.e52034"
-            ]
-        ]
-    },
-    {
-        "id": "9f557055.dc4328",
-        "type": "ui_switch",
-        "z": "9896f883.a15a6",
-        "name": "",
-        "label": "DO 1.3",
-        "tooltip": "",
-        "group": "147012f0.fc1afd",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "x": 1060,
-        "y": 1000,
-        "wires": [
-            [
-                "474435bd.b17e84"
-            ]
-        ]
-    },
-    {
-        "id": "3a7d8178.cc7676",
-        "type": "unipi-output",
-        "z": "9896f883.a15a6",
-        "name": "DO 1.4",
-        "cmd": "set",
-        "alias": "",
-        "devices": "relay_do",
-        "circuits": "1.04",
-        "enableFil": "1",
-        "inputFil": "",
-        "relayFil": "",
-        "digoutFil": "",
-        "analoutFil": "",
-        "analinFil": "",
-        "ledFil": "",
-        "x": 1460,
-        "y": 1060,
-        "wires": [
-            [
-                "3e451a31.021a2e",
-                "6a8b54f2.e52034"
-            ]
-        ]
-    },
-    {
-        "id": "748e9755.057b18",
-        "type": "ui_switch",
-        "z": "9896f883.a15a6",
-        "name": "",
-        "label": "DO 1.4",
-        "tooltip": "",
-        "group": "147012f0.fc1afd",
-        "order": 0,
-        "width": 0,
-        "height": 0,
-        "passthru": true,
-        "decouple": "false",
-        "topic": "",
-        "style": "",
-        "onvalue": "true",
-        "onvalueType": "bool",
-        "onicon": "",
-        "oncolor": "",
-        "offvalue": "false",
-        "offvalueType": "bool",
-        "officon": "",
-        "offcolor": "",
-        "x": 1060,
-        "y": 1060,
-        "wires": [
-            [
-                "3a7d8178.cc7676"
-            ]
-        ]
-    },
-    {
-        "id": "75ec3940.98315",
-        "type": "unipi-input",
-        "z": "9896f883.a15a6",
-        "name": "DO 1.1",
-        "alias": "",
-        "devices": "relay_do",
-        "circuits": "1.01",
-        "property": "value",
-        "seedev": "1",
-        "seecirc": "1",
-        "seeorig": "1",
-        "x": 660,
-        "y": 880,
-        "wires": [
-            [
-                "2f4c586f.a1e82"
-            ]
-        ]
-    },
-    {
-        "id": "2f4c586f.a1e82",
-        "type": "function",
-        "z": "9896f883.a15a6",
-        "name": "To boolean",
-        "func": "var digital_output = \"1.1\"\nvar options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };\nvar today  = new Date();\nvar date = today.toLocaleDateString(\"fr-FR\", options);\nvar timestamp = new Date().getTime();\nvar value = msg.value\n\nmsg.influxdb = {\n    status: msg.payload,\n    digital_output : digital_output,\n    timestamp: Date(Date.now())\n} \n\n\nreturn msg",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 850,
-        "y": 880,
-        "wires": [
-            [
-                "35cb64e5.6ede94"
-            ]
-        ]
-    },
-    {
-        "id": "1a4f5e81.11de31",
-        "type": "unipi-input",
-        "z": "9896f883.a15a6",
-        "name": "DO 1.2",
-        "alias": "",
-        "devices": "relay_do",
-        "circuits": "1.02",
-        "property": "value",
-        "seedev": "0",
-        "seecirc": "0",
-        "seeorig": "0",
-        "x": 660,
-        "y": 940,
-        "wires": [
-            [
-                "4ed0805.940c78"
-            ]
-        ]
-    },
-    {
-        "id": "4ed0805.940c78",
-        "type": "function",
-        "z": "9896f883.a15a6",
-        "name": "To boolean",
-        "func": "var digital_output = \"1.2\"\nvar options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };\nvar today  = new Date();\nvar date = today.toLocaleDateString(\"fr-FR\", options);\nvar timestamp = new Date().getTime();\nvar value = msg.value\n\nmsg.influxdb = {\n    status: msg.payload,\n    digital_output : digital_output,\n    timestamp: Date(Date.now())\n} \n\n\nreturn msg\nreturn true",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 850,
-        "y": 940,
-        "wires": [
-            [
-                "f767c864.a3cb98"
-            ]
-        ]
-    },
-    {
-        "id": "ae1c9891.9d11f",
-        "type": "unipi-input",
-        "z": "9896f883.a15a6",
-        "name": "DO 1.3",
-        "alias": "",
-        "devices": "relay_do",
-        "circuits": "1.03",
-        "property": "value",
-        "seedev": "0",
-        "seecirc": "0",
-        "seeorig": "0",
-        "x": 660,
-        "y": 1000,
-        "wires": [
-            [
-                "ab9bbc1c.c45208"
-            ]
-        ]
-    },
-    {
-        "id": "ab9bbc1c.c45208",
-        "type": "function",
-        "z": "9896f883.a15a6",
-        "name": "To boolean",
-        "func": "var digital_output = \"1.3\"\nvar options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };\nvar today  = new Date();\nvar date = today.toLocaleDateString(\"fr-FR\", options);\nvar timestamp = new Date().getTime();\nvar value = msg.value\n\nmsg.influxdb = {\n    status: msg.payload,\n    digital_output : digital_output,\n    timestamp: Date(Date.now())\n} \n\n\nreturn msg",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 850,
-        "y": 1000,
-        "wires": [
-            [
-                "9f557055.dc4328"
-            ]
-        ]
-    },
-    {
-        "id": "c6147a7a.7926b8",
-        "type": "unipi-input",
-        "z": "9896f883.a15a6",
-        "name": "DO 1.4",
-        "alias": "",
-        "devices": "relay_do",
-        "circuits": "1.04",
-        "property": "value",
-        "seedev": "0",
-        "seecirc": "0",
-        "seeorig": "0",
-        "x": 660,
-        "y": 1060,
-        "wires": [
-            [
-                "8b77f76e.e53db8"
-            ]
-        ]
-    },
-    {
-        "id": "8b77f76e.e53db8",
-        "type": "function",
-        "z": "9896f883.a15a6",
-        "name": "To boolean",
-        "func": "var digital_output = \"1.4\"\nvar options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };\nvar today  = new Date();\nvar date = today.toLocaleDateString(\"fr-FR\", options);\nvar timestamp = new Date().getTime();\nvar value = msg.value\n\nmsg.influxdb = {\n    status: msg.payload,\n    digital_output : digital_output,\n    timestamp: Date(Date.now())\n} \n\n\nreturn msg",
-        "outputs": 1,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 850,
-        "y": 1060,
-        "wires": [
-            [
-                "748e9755.057b18"
-            ]
-        ]
-    },
-    {
-        "id": "8623262a.ad68d",
-        "type": "unipi-input",
-        "z": "9896f883.a15a6",
-        "name": "AO 1.1",
-        "alias": "",
-        "devices": "ao",
-        "circuits": "1.01",
-        "property": "value",
-        "seedev": "0",
-        "seecirc": "0",
-        "seeorig": "0",
-        "x": 660,
-        "y": 1140,
-        "wires": [
-            [
-                "48aac1e1.313498"
-            ]
-        ]
-    },
-    {
-        "id": "71fbb606.d8f65",
-        "type": "comment",
-        "z": "9896f883.a15a6",
-        "name": "Input section",
-        "info": "Reading from websocket channel provided by Evok\nFiltering only the messages for given IO\nFormatting the value to be displayed in the UI\nDisplaying in the UI",
-        "x": 530,
-        "y": 120,
-        "wires": []
-    },
-    {
-        "id": "ed7c94b7.98c1d",
-        "type": "json",
-        "z": "9896f883.a15a6",
-        "name": "digital_input_json",
-        "property": "payload",
-        "action": "",
-        "pretty": true,
-        "x": 1650,
-        "y": 460,
-        "wires": [
-            [
-                "2976714c.ddfc2e",
-                "74e25619.53e66"
-            ]
-        ]
-    },
-    {
-        "id": "74e25619.53e66",
-        "type": "debug",
-        "z": "9896f883.a15a6",
-        "name": "",
-        "active": false,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1910,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "2976714c.ddfc2e",
-        "type": "file",
-        "z": "9896f883.a15a6",
-        "name": "",
-        "filename": "/home/unipi/datalog/test2.json",
-        "appendNewline": true,
-        "createDir": true,
-        "overwriteFile": "false",
-        "encoding": "utf8",
-        "x": 1970,
-        "y": 380,
-        "wires": [
-            []
-        ]
-    },
-    {
-        "id": "bd4fe9f0.69d918",
-        "type": "file",
-        "z": "9896f883.a15a6",
-        "name": "json file store in local",
-        "filename": "/home/unipi/datalog/test3.json",
-        "appendNewline": true,
-        "createDir": true,
-        "overwriteFile": "false",
-        "encoding": "utf8",
-        "x": 2020,
-        "y": 720,
-        "wires": [
-            [
-                "93bc8e2d.bbd5d"
-            ]
-        ]
-    },
-    {
-        "id": "6a8b54f2.e52034",
-        "type": "json",
-        "z": "9896f883.a15a6",
-        "name": "digital_output_json",
-        "property": "do11",
-        "action": "",
-        "pretty": true,
-        "x": 1790,
-        "y": 800,
-        "wires": [
-            [
-                "bd4fe9f0.69d918"
-            ]
-        ]
-    },
-    {
-        "id": "93bc8e2d.bbd5d",
-        "type": "debug",
-        "z": "9896f883.a15a6",
-        "name": "influxdb - print console",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "influxdb",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2260,
-        "y": 720,
-        "wires": []
-    },
-    {
-        "id": "be328450.228cf",
-        "type": "influxdb in",
-        "z": "9896f883.a15a6",
-        "influxdb": "c21ccac0.37f0a8",
-        "name": "influxdb",
-        "query": "SHOW DATABASES;",
-        "rawOutput": false,
-        "precision": "",
-        "retentionPolicy": "",
-        "org": "organisation",
-        "x": 1940,
-        "y": 1140,
-        "wires": [
-            [
-                "939f66c4.c4e308"
-            ]
-        ]
-    },
-    {
-        "id": "939f66c4.c4e308",
-        "type": "debug",
-        "z": "9896f883.a15a6",
-        "name": "print",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2110,
-        "y": 1140,
-        "wires": []
-    },
-    {
-        "id": "ad43eb3c.6d60d",
-        "type": "inject",
-        "z": "9896f883.a15a6",
-        "name": "show database",
-        "props": [
-            {
-                "p": "payload"
-            }
-        ],
-        "repeat": "",
-        "crontab": "",
-        "once": false,
-        "onceDelay": 0.1,
-        "topic": "",
-        "payload": "",
-        "payloadType": "date",
-        "x": 1760,
-        "y": 1140,
-        "wires": [
-            [
-                "be328450.228cf"
-            ]
-        ]
-    },
-    {
-        "id": "77f2482d.bf369",
-        "type": "debug",
-        "z": "9896f883.a15a6",
-        "name": "print",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "temperature",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1770,
-        "y": 600,
-        "wires": []
-    },
-    {
-        "id": "2ee87709.513ec",
+        "id": "816c9082.d3e24",
         "type": "mqtt in",
-        "z": "8dd57283.d7602",
+        "z": "c889e48f.c0de78",
         "name": "zigbee2mqtt/out",
         "topic": "zigbee2mqtt/bridge/networkmap/graphviz",
         "qos": "2",
         "datatype": "auto",
-        "broker": "d5951e14.94c918",
+        "broker": "d0d6034f.68aa08",
         "nl": false,
         "rap": false,
         "x": 120,
         "y": 140,
         "wires": [
             [
-                "53f80172.90397"
+                "93d97544.93b39"
             ]
         ]
     },
     {
-        "id": "c22b5f95.16aa48",
+        "id": "16db40d0.6c59e7",
         "type": "http in",
-        "z": "8dd57283.d7602",
+        "z": "c889e48f.c0de78",
         "name": "",
         "url": "/adminpanelapi/networkmap/graphviz",
         "method": "get",
@@ -2078,23 +1308,23 @@
         "y": 200,
         "wires": [
             [
-                "5bac5824.661c1"
+                "7328060b.e9e9a"
             ]
         ]
     },
     {
-        "id": "8f1c99e.a6583e8",
+        "id": "52c1aec6.ea6cf",
         "type": "http response",
-        "z": "8dd57283.d7602",
+        "z": "c889e48f.c0de78",
         "name": "",
         "x": 610,
         "y": 200,
         "wires": []
     },
     {
-        "id": "5bac5824.661c1",
+        "id": "7328060b.e9e9a",
         "type": "function",
-        "z": "8dd57283.d7602",
+        "z": "c889e48f.c0de78",
         "name": "get from flow",
         "func": "var networkmap = flow.get('networkmap');\n\nmsg.payload = networkmap;\nreturn msg;",
         "outputs": 1,
@@ -2103,14 +1333,14 @@
         "y": 200,
         "wires": [
             [
-                "8f1c99e.a6583e8"
+                "52c1aec6.ea6cf"
             ]
         ]
     },
     {
-        "id": "41550228.918e3c",
+        "id": "4e72996.8da8468",
         "type": "inject",
-        "z": "8dd57283.d7602",
+        "z": "c889e48f.c0de78",
         "name": "",
         "repeat": "",
         "crontab": "",
@@ -2123,14 +1353,14 @@
         "y": 80,
         "wires": [
             [
-                "6867c9cb.e44cd8"
+                "e79640eb.4d5aa"
             ]
         ]
     },
     {
-        "id": "53f80172.90397",
+        "id": "93d97544.93b39",
         "type": "function",
-        "z": "8dd57283.d7602",
+        "z": "c889e48f.c0de78",
         "name": "store in flow",
         "func": "flow.set('networkmap',msg.payload);\nreturn msg;",
         "outputs": 1,
@@ -2142,9 +1372,9 @@
         ]
     },
     {
-        "id": "6867c9cb.e44cd8",
+        "id": "e79640eb.4d5aa",
         "type": "mqtt out",
-        "z": "8dd57283.d7602",
+        "z": "c889e48f.c0de78",
         "name": "zigbee2mqtt/in",
         "topic": "zigbee2mqtt/bridge/networkmap",
         "qos": "",
@@ -2154,15 +1384,15 @@
         "userProps": "",
         "correl": "",
         "expiry": "",
-        "broker": "d5951e14.94c918",
+        "broker": "d0d6034f.68aa08",
         "x": 280,
         "y": 80,
         "wires": []
     },
     {
-        "id": "ea2633ff.17e77",
+        "id": "f5181d0f.919898",
         "type": "http in",
-        "z": "8dd57283.d7602",
+        "z": "c889e48f.c0de78",
         "name": "",
         "url": "/adminpanelapi/networkmap/viz/:engine",
         "method": "get",
@@ -2172,14 +1402,14 @@
         "y": 260,
         "wires": [
             [
-                "7120fa70.131d9c"
+                "7ee4a4f4.d8f27c"
             ]
         ]
     },
     {
-        "id": "6542ab52.0abeec",
+        "id": "80faaff5.e827c",
         "type": "http response",
-        "z": "8dd57283.d7602",
+        "z": "c889e48f.c0de78",
         "name": "",
         "statusCode": "",
         "headers": {},
@@ -2188,9 +1418,9 @@
         "wires": []
     },
     {
-        "id": "7e8c6011.e51ce",
+        "id": "40fcb30.581494c",
         "type": "function",
-        "z": "8dd57283.d7602",
+        "z": "c889e48f.c0de78",
         "name": "generate viz html",
         "func": "var html = `<!DOCTYPE html>\n<html lang=\"en\">\n  <head>\n    <meta charset=\"UTF-8\">\n    <title>NetworkMap</title>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/viz.js\"></script>\n    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/viz.js/2.1.2/full.render.js\"></script>\n    <script src='https://cdn.jsdelivr.net/npm/svg-pan-zoom@3.5.0/dist/svg-pan-zoom.min.js'></script>\n    <style>\n    svg {\n      width: 100% !important;\n      height: 100% !important;\n      min-width: 100% !important;\n      min-height: 80% !important;\n    }\n    </style>\n  </head>\n  <body>\n    <div id=\"output\"></div>\n    \n    <script>\n        var graphData = '${(flow.get('networkmap')).replace(/(\\r\\n|\\n|\\r)/gm,\"\")}';\n        var vizOptions = { format: 'svg', engine: '${msg.engine}'}\n        var graph = document.querySelector(\"#output\");\n        var svg = graph.querySelector(\"svg\");\n        if (svg) {\n          graph.removeChild(svg);\n        }        \n\n        var viz = new Viz();\n\n        viz.renderSVGElement(graphData, vizOptions)\n          .then(function(svg) {\n            svg.id = \"svg_output\";\n            graph.appendChild(svg);              \n            \n            panZoom = svgPanZoom(svg, {\n              zoomEnabled: true,\n              controlIconsEnabled: true,\n              contain: true,\n              center: true,\n              minZoom: 0.1\n            });\n\n            svg.addEventListener('paneresize', function(e) {\n              panZoom.resize();\n            }, false);\n            window.addEventListener('resize', function(e) {\n              panZoom.resize();\n            });\n          })\n          .catch(error => {\n            // Create a new Viz instance (@see Caveats page for more info)\n            viz = new Viz();\n  \n            // Possibly display the error\n            console.error(error);\n          });\n    </script>\n  </body>\n</html>\n`\n\nmsg.payload = html;\nreturn msg;",
         "outputs": 1,
@@ -2199,14 +1429,14 @@
         "y": 260,
         "wires": [
             [
-                "6542ab52.0abeec"
+                "80faaff5.e827c"
             ]
         ]
     },
     {
-        "id": "7120fa70.131d9c",
+        "id": "7ee4a4f4.d8f27c",
         "type": "function",
-        "z": "8dd57283.d7602",
+        "z": "c889e48f.c0de78",
         "name": "set engine",
         "func": "var availableEngines = ['circo', 'dot', 'fdp', 'neato', 'osage', 'twopi']\nif(availableEngines.includes(msg.req.params.engine)) { msg.engine = msg.req.params.engine }\nelse { msg.engine = 'dot' }\nreturn msg;",
         "outputs": 1,
@@ -2215,33 +1445,33 @@
         "y": 260,
         "wires": [
             [
-                "7e8c6011.e51ce"
+                "40fcb30.581494c"
             ]
         ]
     },
     {
-        "id": "b09e428.17620c",
+        "id": "e11cabd6.069f6",
         "type": "mqtt in",
-        "z": "beb6d09d.90147",
+        "z": "3a74a16f.932a2e",
         "name": "zigbee2mqtt/logging",
         "topic": "zigbee2mqtt/bridge/log",
         "qos": "2",
         "datatype": "auto",
-        "broker": "d5951e14.94c918",
+        "broker": "d0d6034f.68aa08",
         "nl": false,
         "rap": false,
         "x": 290,
         "y": 140,
         "wires": [
             [
-                "5463eda0.dc444c"
+                "1ce8d587.6f771a"
             ]
         ]
     },
     {
-        "id": "5463eda0.dc444c",
+        "id": "1ce8d587.6f771a",
         "type": "json",
-        "z": "beb6d09d.90147",
+        "z": "3a74a16f.932a2e",
         "name": "",
         "property": "payload",
         "action": "",
@@ -2250,16 +1480,16 @@
         "y": 140,
         "wires": [
             [
-                "b6db1332.474a68",
-                "df01ccb9.2f74e",
-                "6f9a601.faa232"
+                "2dd0f416.fd8004",
+                "27bfaf50.4eab88",
+                "7640793a.3034c8"
             ]
         ]
     },
     {
-        "id": "59e65998.d83c9",
+        "id": "e888a29.98fd6e",
         "type": "ui_toast",
-        "z": "beb6d09d.90147",
+        "z": "3a74a16f.932a2e",
         "position": "top right",
         "displayTime": "30",
         "highlight": "",
@@ -2273,9 +1503,9 @@
         "wires": []
     },
     {
-        "id": "b6db1332.474a68",
+        "id": "2dd0f416.fd8004",
         "type": "function",
-        "z": "beb6d09d.90147",
+        "z": "3a74a16f.932a2e",
         "name": "Notification",
         "func": "if(msg.payload.type == \"pairing\" && msg.payload.message == \"connecting with device\") {\n\nmsg.payload = (\"A device is attempting to pair...\");\n\nreturn msg;\n}\n",
         "outputs": 1,
@@ -2284,14 +1514,14 @@
         "y": 80,
         "wires": [
             [
-                "59e65998.d83c9"
+                "e888a29.98fd6e"
             ]
         ]
     },
     {
-        "id": "10a85073.942ec8",
+        "id": "32a74743.f07e3",
         "type": "comment",
-        "z": "beb6d09d.90147",
+        "z": "3a74a16f.932a2e",
         "name": "Notification",
         "info": "",
         "x": 110,
@@ -2299,9 +1529,9 @@
         "wires": []
     },
     {
-        "id": "e01cdad7.8bd88",
+        "id": "fbbc3df2.9f9fa8",
         "type": "comment",
-        "z": "beb6d09d.90147",
+        "z": "3a74a16f.932a2e",
         "name": "Pairing",
         "info": "",
         "x": 590,
@@ -2309,9 +1539,9 @@
         "wires": []
     },
     {
-        "id": "586108d7.8256f8",
+        "id": "2c3d21e6.ed490e",
         "type": "ui_toast",
-        "z": "beb6d09d.90147",
+        "z": "3a74a16f.932a2e",
         "position": "top right",
         "displayTime": "10",
         "highlight": "",
@@ -2325,9 +1555,9 @@
         "wires": []
     },
     {
-        "id": "df01ccb9.2f74e",
+        "id": "27bfaf50.4eab88",
         "type": "function",
-        "z": "beb6d09d.90147",
+        "z": "3a74a16f.932a2e",
         "name": "Notification",
         "func": "if(msg.payload.type == \"device_connected\") {\n\nmsg.payload = (\"Device paired successfully: \" + msg.payload.message);\n\nreturn msg;\n}\n",
         "outputs": 1,
@@ -2336,14 +1566,14 @@
         "y": 200,
         "wires": [
             [
-                "586108d7.8256f8"
+                "2c3d21e6.ed490e"
             ]
         ]
     },
     {
-        "id": "dc3546e4.7d9a88",
+        "id": "f5746ab1.5de208",
         "type": "comment",
-        "z": "beb6d09d.90147",
+        "z": "3a74a16f.932a2e",
         "name": "Paired",
         "info": "",
         "x": 590,
@@ -2351,9 +1581,9 @@
         "wires": []
     },
     {
-        "id": "623ad5fa.37fae4",
+        "id": "1721b00a.cbb88",
         "type": "ui_toast",
-        "z": "beb6d09d.90147",
+        "z": "3a74a16f.932a2e",
         "position": "top right",
         "displayTime": "30",
         "highlight": "",
@@ -2367,9 +1597,9 @@
         "wires": []
     },
     {
-        "id": "6f9a601.faa232",
+        "id": "7640793a.3034c8",
         "type": "function",
-        "z": "beb6d09d.90147",
+        "z": "3a74a16f.932a2e",
         "name": "Notification",
         "func": "if(msg.payload.type == \"pairing\" && msg.payload.message == \"device incoming\") {\n\nmsg.payload = (\"A device is incoming or repairing...\");\n\nreturn msg;\n}\n",
         "outputs": 1,
@@ -2378,14 +1608,14 @@
         "y": 140,
         "wires": [
             [
-                "623ad5fa.37fae4"
+                "1721b00a.cbb88"
             ]
         ]
     },
     {
-        "id": "a71beaf5.9f7188",
+        "id": "48487f61.b77f7",
         "type": "comment",
-        "z": "beb6d09d.90147",
+        "z": "3a74a16f.932a2e",
         "name": "Incoming or Repairing",
         "info": "",
         "x": 640,
@@ -2393,29 +1623,29 @@
         "wires": []
     },
     {
-        "id": "9fd2fd58.7c4d48",
+        "id": "2cd4f1a5.31ac66",
         "type": "mqtt in",
-        "z": "70dc33e2.ff6b8c",
+        "z": "18ee9ac0.54c68d",
         "name": "zigbee2mqtt/out devices",
         "topic": "zigbee2mqtt/bridge/log",
         "qos": "2",
         "datatype": "auto",
-        "broker": "d5951e14.94c918",
+        "broker": "d0d6034f.68aa08",
         "nl": false,
         "rap": false,
         "x": 350,
         "y": 140,
         "wires": [
             [
-                "472de943.bce008"
+                "22a9a234.d35e16"
             ]
         ]
     },
     {
-        "id": "7aff7453.1aea6c",
+        "id": "943d41c4.3d647",
         "type": "ui_template",
-        "z": "70dc33e2.ff6b8c",
-        "group": "922741d3.52d3d8",
+        "z": "18ee9ac0.54c68d",
+        "group": "26288e28.8a640a",
         "name": "",
         "order": 0,
         "width": "12",
@@ -2431,9 +1661,9 @@
         ]
     },
     {
-        "id": "389c69df.12311e",
+        "id": "b69619b6.e6158",
         "type": "mqtt out",
-        "z": "70dc33e2.ff6b8c",
+        "z": "18ee9ac0.54c68d",
         "name": "zigbee2mqtt/in devices",
         "topic": "zigbee2mqtt/bridge/config/devices",
         "qos": "",
@@ -2443,15 +1673,15 @@
         "userProps": "",
         "correl": "",
         "expiry": "",
-        "broker": "d5951e14.94c918",
+        "broker": "d0d6034f.68aa08",
         "x": 580,
         "y": 60,
         "wires": []
     },
     {
-        "id": "e4a1cde0.f2e3f8",
+        "id": "7cdcf6.afb3b30c",
         "type": "inject",
-        "z": "70dc33e2.ff6b8c",
+        "z": "18ee9ac0.54c68d",
         "name": "Request Device List",
         "repeat": "4",
         "crontab": "",
@@ -2464,14 +1694,14 @@
         "y": 60,
         "wires": [
             [
-                "389c69df.12311e"
+                "b69619b6.e6158"
             ]
         ]
     },
     {
-        "id": "bc37a82e.b06198",
+        "id": "6da62cbd.a8dccc",
         "type": "comment",
-        "z": "70dc33e2.ff6b8c",
+        "z": "18ee9ac0.54c68d",
         "name": "Request Device List",
         "info": "",
         "x": 130,
@@ -2479,9 +1709,9 @@
         "wires": []
     },
     {
-        "id": "eab53aff.beddc",
+        "id": "f3a92ea8.baee4",
         "type": "comment",
-        "z": "70dc33e2.ff6b8c",
+        "z": "18ee9ac0.54c68d",
         "name": "Receive Device List",
         "info": "",
         "x": 130,
@@ -2489,9 +1719,9 @@
         "wires": []
     },
     {
-        "id": "472de943.bce008",
+        "id": "22a9a234.d35e16",
         "type": "json",
-        "z": "70dc33e2.ff6b8c",
+        "z": "18ee9ac0.54c68d",
         "name": "",
         "property": "payload",
         "action": "",
@@ -2500,16 +1730,16 @@
         "y": 140,
         "wires": [
             [
-                "7aff7453.1aea6c",
-                "381d9552.89ba62",
-                "469cdfd1.57c908"
+                "943d41c4.3d647",
+                "2d32823a.371e8e",
+                "3f2da84a.db546"
             ]
         ]
     },
     {
-        "id": "ddb43402.a700e8",
+        "id": "5939495a.e27ea",
         "type": "http in",
-        "z": "70dc33e2.ff6b8c",
+        "z": "18ee9ac0.54c68d",
         "name": "",
         "url": "/adminpanelapi/devicelist",
         "method": "get",
@@ -2519,14 +1749,14 @@
         "y": 220,
         "wires": [
             [
-                "c4897f8f.7b39c"
+                "c946b05f.2422b"
             ]
         ]
     },
     {
-        "id": "381d9552.89ba62",
+        "id": "2d32823a.371e8e",
         "type": "function",
-        "z": "70dc33e2.ff6b8c",
+        "z": "18ee9ac0.54c68d",
         "name": "Store Data",
         "func": "flow.set('devicelist',msg.payload);",
         "outputs": 1,
@@ -2538,18 +1768,18 @@
         ]
     },
     {
-        "id": "591e2384.e4c86c",
+        "id": "3209ab41.569f34",
         "type": "http response",
-        "z": "70dc33e2.ff6b8c",
+        "z": "18ee9ac0.54c68d",
         "name": "",
         "x": 870,
         "y": 220,
         "wires": []
     },
     {
-        "id": "c4897f8f.7b39c",
+        "id": "c946b05f.2422b",
         "type": "function",
-        "z": "70dc33e2.ff6b8c",
+        "z": "18ee9ac0.54c68d",
         "name": "Get Data",
         "func": "var devicelist = flow.get('devicelist');\nmsg.payload = devicelist;\nreturn msg;",
         "outputs": 1,
@@ -2558,14 +1788,14 @@
         "y": 220,
         "wires": [
             [
-                "591e2384.e4c86c"
+                "3209ab41.569f34"
             ]
         ]
     },
     {
-        "id": "30e18cba.3c843c",
+        "id": "39238857.418b5",
         "type": "comment",
-        "z": "70dc33e2.ff6b8c",
+        "z": "18ee9ac0.54c68d",
         "name": "HTTP JSON API",
         "info": "",
         "x": 120,
@@ -2573,9 +1803,9 @@
         "wires": []
     },
     {
-        "id": "469cdfd1.57c908",
+        "id": "3f2da84a.db546",
         "type": "function",
-        "z": "70dc33e2.ff6b8c",
+        "z": "18ee9ac0.54c68d",
         "name": "Store Globally",
         "func": "global.set('zigbee2mqttdevicelist',msg.payload.message);\nreturn msg;",
         "outputs": 1,
@@ -2587,28 +1817,28 @@
         ]
     },
     {
-        "id": "31a451f7.ca5316",
+        "id": "db862a1a.b8ffe",
         "type": "mqtt in",
-        "z": "12f9e98.5a8e317",
+        "z": "18d05b79.6c7a45",
         "name": "zigbee2mqtt/bridge state",
         "topic": "zigbee2mqtt/bridge/state",
         "qos": "2",
         "datatype": "auto",
-        "broker": "d5951e14.94c918",
+        "broker": "d0d6034f.68aa08",
         "nl": false,
         "rap": false,
         "x": 270,
         "y": 80,
         "wires": [
             [
-                "8525faaf.c8cb4"
+                "c25631f9.e18a6"
             ]
         ]
     },
     {
-        "id": "8525faaf.c8cb4",
+        "id": "c25631f9.e18a6",
         "type": "function",
-        "z": "12f9e98.5a8e317",
+        "z": "18d05b79.6c7a45",
         "name": "Format Data",
         "func": "flow.set('bridgestate',msg.payload);\nvar bridgestate = flow.get('bridgestate');\nmsg.payload = bridgestate;\nreturn msg;",
         "outputs": 1,
@@ -2620,15 +1850,15 @@
         "y": 80,
         "wires": [
             [
-                "30981af9.de1b4e"
+                "8c532457.f8898"
             ]
         ]
     },
     {
-        "id": "50f5799d.dd42f",
+        "id": "d83a1193.b50f5",
         "type": "ui_template",
-        "z": "12f9e98.5a8e317",
-        "group": "1614803.0311b8",
+        "z": "18d05b79.6c7a45",
+        "group": "be1f9c0f.6d6678",
         "name": "",
         "order": 0,
         "width": "6",
@@ -2644,9 +1874,9 @@
         ]
     },
     {
-        "id": "12e59761.165949",
+        "id": "9e3f3ed.34dd44",
         "type": "function",
-        "z": "12f9e98.5a8e317",
+        "z": "18d05b79.6c7a45",
         "name": "Format Data",
         "func": "var bridgestate = flow.get('bridgestate');\nvar devicelist = global.get('zigbee2mqttdevicelist');\nmsg.payload = {}\nmsg.payload.bridgestate = bridgestate;\nif (devicelist)  {\n    msg.payload.numberofdevices = devicelist.length;\n} else {\n    return null\n}\n\n\nreturn msg;",
         "outputs": 1,
@@ -2658,14 +1888,14 @@
         "y": 140,
         "wires": [
             [
-                "50f5799d.dd42f"
+                "d83a1193.b50f5"
             ]
         ]
     },
     {
-        "id": "92acc1da.050cd8",
+        "id": "8f09b57d.146",
         "type": "inject",
-        "z": "12f9e98.5a8e317",
+        "z": "18d05b79.6c7a45",
         "name": "",
         "repeat": "3",
         "crontab": "",
@@ -2678,14 +1908,14 @@
         "y": 140,
         "wires": [
             [
-                "12e59761.165949"
+                "9e3f3ed.34dd44"
             ]
         ]
     },
     {
-        "id": "30981af9.de1b4e",
+        "id": "8c532457.f8898",
         "type": "debug",
-        "z": "12f9e98.5a8e317",
+        "z": "18d05b79.6c7a45",
         "name": "",
         "active": true,
         "tosidebar": true,
@@ -2697,9 +1927,9 @@
         "wires": []
     },
     {
-        "id": "9099b633.3279c8",
+        "id": "3cb0ee36.fdf992",
         "type": "comment",
-        "z": "12f9e98.5a8e317",
+        "z": "18d05b79.6c7a45",
         "name": "Get state",
         "info": "",
         "x": 80,
@@ -2707,9 +1937,9 @@
         "wires": []
     },
     {
-        "id": "e6224861.520b9",
+        "id": "dd831498.7d752",
         "type": "comment",
-        "z": "12f9e98.5a8e317",
+        "z": "18d05b79.6c7a45",
         "name": "Update Web UI on Interval",
         "info": "",
         "x": 130,
@@ -2717,9 +1947,9 @@
         "wires": []
     },
     {
-        "id": "3f265da8.c40652",
+        "id": "b9a53115.91caf",
         "type": "http in",
-        "z": "12f9e98.5a8e317",
+        "z": "18d05b79.6c7a45",
         "name": "",
         "url": "/adminpanelapi/state",
         "method": "get",
@@ -2729,23 +1959,23 @@
         "y": 220,
         "wires": [
             [
-                "8936e98f.2d4618"
+                "8e4da037.eb3828"
             ]
         ]
     },
     {
-        "id": "aad6ea81.c733d8",
+        "id": "b1b2f8f6.e41b28",
         "type": "http response",
-        "z": "12f9e98.5a8e317",
+        "z": "18d05b79.6c7a45",
         "name": "",
         "x": 590,
         "y": 220,
         "wires": []
     },
     {
-        "id": "8936e98f.2d4618",
+        "id": "8e4da037.eb3828",
         "type": "function",
-        "z": "12f9e98.5a8e317",
+        "z": "18d05b79.6c7a45",
         "name": "Get Data",
         "func": "var bridgestate = flow.get('bridgestate');\nmsg.payload = bridgestate;\nreturn msg;",
         "outputs": 1,
@@ -2754,14 +1984,14 @@
         "y": 220,
         "wires": [
             [
-                "aad6ea81.c733d8"
+                "b1b2f8f6.e41b28"
             ]
         ]
     },
     {
-        "id": "9e42ed0b.8828b8",
+        "id": "5788b697.d08048",
         "type": "comment",
-        "z": "12f9e98.5a8e317",
+        "z": "18d05b79.6c7a45",
         "name": "HTTP API",
         "info": "",
         "x": 80,
@@ -2769,13 +1999,13 @@
         "wires": []
     },
     {
-        "id": "4cb5229c.60290c",
+        "id": "ef65c949.92f74",
         "type": "ui_dropdown",
-        "z": "9a69d1a3.7d6db",
+        "z": "dddfc13c.2ef78",
         "name": "",
         "label": "",
         "place": "Select option",
-        "group": "7999538b.d14d44",
+        "group": "7d0addf5.4408dc",
         "order": 1,
         "width": 0,
         "height": 0,
@@ -2808,14 +2038,14 @@
         "y": 60,
         "wires": [
             [
-                "272ca2d9.c1f6be"
+                "6b4b4a08.742504"
             ]
         ]
     },
     {
-        "id": "272ca2d9.c1f6be",
+        "id": "6b4b4a08.742504",
         "type": "mqtt out",
-        "z": "9a69d1a3.7d6db",
+        "z": "dddfc13c.2ef78",
         "name": "zigbee2mqtt/in Logging Level",
         "topic": "zigbee2mqtt/bridge/config/log_level",
         "qos": "",
@@ -2825,18 +2055,18 @@
         "userProps": "",
         "correl": "",
         "expiry": "",
-        "broker": "d5951e14.94c918",
+        "broker": "d0d6034f.68aa08",
         "x": 380,
         "y": 60,
         "wires": []
     },
     {
-        "id": "299a9ddd.406372",
+        "id": "fe6217f1.ffe378",
         "type": "ui_text_input",
-        "z": "15e83bbb.0c767c",
+        "z": "85fda48f.62176",
         "name": "",
         "label": "Device Name",
-        "group": "6b6b475c.92b0e",
+        "group": "b8cb423d.374858",
         "order": 3,
         "width": 0,
         "height": 0,
@@ -2848,14 +2078,14 @@
         "y": 60,
         "wires": [
             [
-                "a9448f6a.877668"
+                "2bb974bc.70e674"
             ]
         ]
     },
     {
-        "id": "72fa8db8.ab4c44",
+        "id": "91d1aa71.1cb528",
         "type": "mqtt out",
-        "z": "15e83bbb.0c767c",
+        "z": "85fda48f.62176",
         "name": "zigbee2mqtt/in Remove",
         "topic": "zigbee2mqtt/bridge/config/remove",
         "qos": "",
@@ -2865,15 +2095,15 @@
         "userProps": "",
         "correl": "",
         "expiry": "",
-        "broker": "d5951e14.94c918",
+        "broker": "d0d6034f.68aa08",
         "x": 1190,
         "y": 60,
         "wires": []
     },
     {
-        "id": "375c52cb.00f6d6",
+        "id": "95446f7b.18fbd8",
         "type": "function",
-        "z": "15e83bbb.0c767c",
+        "z": "85fda48f.62176",
         "name": "Format Data",
         "func": "flow.set('remove',msg.payload.remove);",
         "outputs": 1,
@@ -2885,9 +2115,9 @@
         ]
     },
     {
-        "id": "a9448f6a.877668",
+        "id": "2bb974bc.70e674",
         "type": "change",
-        "z": "15e83bbb.0c767c",
+        "z": "85fda48f.62176",
         "name": "change msg old",
         "rules": [
             {
@@ -2907,14 +2137,14 @@
         "y": 60,
         "wires": [
             [
-                "375c52cb.00f6d6"
+                "95446f7b.18fbd8"
             ]
         ]
     },
     {
-        "id": "dbb880a5.975c6",
+        "id": "554cc8f0.432ff8",
         "type": "function",
-        "z": "15e83bbb.0c767c",
+        "z": "85fda48f.62176",
         "name": "Format Data",
         "func": "var remove = flow.get('remove');\nif (typeof remove !== 'undefined' && remove !== null && remove !== \"\"){\nmsg.payload = remove;\n\nreturn msg;\n}",
         "outputs": 1,
@@ -2923,16 +2153,16 @@
         "y": 60,
         "wires": [
             [
-                "72fa8db8.ab4c44"
+                "91d1aa71.1cb528"
             ]
         ]
     },
     {
-        "id": "6943081f.33f2d",
+        "id": "74883d22.bc8674",
         "type": "ui_button",
-        "z": "15e83bbb.0c767c",
+        "z": "85fda48f.62176",
         "name": "",
-        "group": "6b6b475c.92b0e",
+        "group": "b8cb423d.374858",
         "order": 5,
         "width": 0,
         "height": 0,
@@ -2948,15 +2178,15 @@
         "y": 60,
         "wires": [
             [
-                "dbb880a5.975c6",
-                "921cc7ff.1a7a6"
+                "554cc8f0.432ff8",
+                "c519e0c0.0e1c2"
             ]
         ]
     },
     {
-        "id": "482b6b7a.f44f0c",
+        "id": "9352dbe8.5fd",
         "type": "comment",
-        "z": "15e83bbb.0c767c",
+        "z": "85fda48f.62176",
         "name": "Remove Device",
         "info": "",
         "x": 120,
@@ -2964,28 +2194,28 @@
         "wires": []
     },
     {
-        "id": "d02ee769.2279b",
+        "id": "b1cd4434.02cd7",
         "type": "mqtt in",
-        "z": "15e83bbb.0c767c",
+        "z": "85fda48f.62176",
         "name": "zigbee2mqtt/logging",
         "topic": "zigbee2mqtt/bridge/log",
         "qos": "2",
         "datatype": "auto",
-        "broker": "d5951e14.94c918",
+        "broker": "d0d6034f.68aa08",
         "nl": false,
         "rap": false,
         "x": 290,
         "y": 120,
         "wires": [
             [
-                "4f6a2889.9636e8"
+                "8dd1e92.5c28418"
             ]
         ]
     },
     {
-        "id": "4f6a2889.9636e8",
+        "id": "8dd1e92.5c28418",
         "type": "json",
-        "z": "15e83bbb.0c767c",
+        "z": "85fda48f.62176",
         "name": "",
         "property": "payload",
         "action": "",
@@ -2994,14 +2224,14 @@
         "y": 120,
         "wires": [
             [
-                "2201929e.7c7676"
+                "9f4a6e26.2f9718"
             ]
         ]
     },
     {
-        "id": "338041bc.23aa1e",
+        "id": "f00e8ddf.6e9ad",
         "type": "ui_toast",
-        "z": "15e83bbb.0c767c",
+        "z": "85fda48f.62176",
         "position": "top right",
         "displayTime": "5",
         "highlight": "",
@@ -3015,9 +2245,9 @@
         "wires": []
     },
     {
-        "id": "2201929e.7c7676",
+        "id": "9f4a6e26.2f9718",
         "type": "function",
-        "z": "15e83bbb.0c767c",
+        "z": "85fda48f.62176",
         "name": "Notification",
         "func": "if(msg.payload.type == 'device_removed') {\nvar remove = flow.get('remove');\nif (typeof remove !== 'undefined' && remove !== null && remove !== \"\"){\nmsg.payload = (\"Deviced removed: \" + msg.payload.message);\n\n// Reset field\n//remove = \"\";\n//flow.set('remove',msg.payload.message);\n\nreturn msg;\n}\n}\n\n",
         "outputs": 1,
@@ -3026,14 +2256,14 @@
         "y": 120,
         "wires": [
             [
-                "338041bc.23aa1e"
+                "f00e8ddf.6e9ad"
             ]
         ]
     },
     {
-        "id": "d599b1bb.8a1a4",
+        "id": "7d4e450f.5a381c",
         "type": "comment",
-        "z": "15e83bbb.0c767c",
+        "z": "85fda48f.62176",
         "name": "Notification",
         "info": "",
         "x": 110,
@@ -3041,9 +2271,9 @@
         "wires": []
     },
     {
-        "id": "c6a563c7.245e58",
+        "id": "cb584704.7534b8",
         "type": "ui_toast",
-        "z": "15e83bbb.0c767c",
+        "z": "85fda48f.62176",
         "position": "top right",
         "displayTime": "5",
         "highlight": "",
@@ -3057,9 +2287,9 @@
         "wires": []
     },
     {
-        "id": "921cc7ff.1a7a6",
+        "id": "c519e0c0.0e1c2",
         "type": "function",
-        "z": "15e83bbb.0c767c",
+        "z": "85fda48f.62176",
         "name": "Notification",
         "func": "var remove = flow.get('remove');\nif (typeof remove === 'undefined' || remove === null || remove === \"\"){\nmsg.payload = \"Enter a device to remove\";\n\nreturn msg;\n}",
         "outputs": 1,
@@ -3068,19 +2298,19 @@
         "y": 120,
         "wires": [
             [
-                "c6a563c7.245e58"
+                "cb584704.7534b8"
             ]
         ]
     },
     {
-        "id": "a7e572d0.35e9d8",
+        "id": "79123122.8e4d9",
         "type": "ui_dropdown",
-        "z": "89c7559f.91ddd8",
+        "z": "6df79dc.ad07a64",
         "name": "",
         "label": "",
         "tooltip": "",
         "place": "Select option",
-        "group": "478d3769.9df438",
+        "group": "51e22a63.c42a14",
         "order": 1,
         "width": 0,
         "height": 0,
@@ -3103,15 +2333,15 @@
         "y": 40,
         "wires": [
             [
-                "175d6717.0aac69",
-                "2433952.1eafe6a"
+                "5615b064.7da17",
+                "14865cb1.9d7373"
             ]
         ]
     },
     {
-        "id": "175d6717.0aac69",
+        "id": "5615b064.7da17",
         "type": "mqtt out",
-        "z": "89c7559f.91ddd8",
+        "z": "6df79dc.ad07a64",
         "name": "zigbee2mqtt/in Join",
         "topic": "zigbee2mqtt/bridge/config/permit_join",
         "qos": "",
@@ -3121,15 +2351,15 @@
         "userProps": "",
         "correl": "",
         "expiry": "",
-        "broker": "d5951e14.94c918",
+        "broker": "d0d6034f.68aa08",
         "x": 270,
         "y": 40,
         "wires": []
     },
     {
-        "id": "b70eefae.b137b",
+        "id": "9fe87800.725ef8",
         "type": "ui_toast",
-        "z": "89c7559f.91ddd8",
+        "z": "6df79dc.ad07a64",
         "position": "top right",
         "displayTime": "5",
         "highlight": "",
@@ -3143,9 +2373,9 @@
         "wires": []
     },
     {
-        "id": "2433952.1eafe6a",
+        "id": "14865cb1.9d7373",
         "type": "function",
-        "z": "89c7559f.91ddd8",
+        "z": "6df79dc.ad07a64",
         "name": "Notification",
         "func": "if (typeof msg.payload !== 'undefined' && msg.payload !== null && msg.payload !== \"\"){\nif (msg.payload == \"false\"){\n    msg.payload = \"Permit join: Deny\";\n}\nif (msg.payload == \"true\"){\n    msg.payload = \"Permit join: Allow\";\n}\nreturn msg;\n}\n",
         "outputs": 1,
@@ -3157,17 +2387,17 @@
         "y": 100,
         "wires": [
             [
-                "b70eefae.b137b"
+                "9fe87800.725ef8"
             ]
         ]
     },
     {
-        "id": "23d816bf.a7c822",
+        "id": "7538cca4.305d44",
         "type": "ui_text_input",
-        "z": "90a28baa.e90c08",
+        "z": "477a9344.f72e0c",
         "name": "",
         "label": "Old Name",
-        "group": "159c11ae.4dd906",
+        "group": "3d736442.beff1c",
         "order": 3,
         "width": 0,
         "height": 0,
@@ -3179,17 +2409,17 @@
         "y": 140,
         "wires": [
             [
-                "439d03a6.67519c"
+                "f7fd7851.a9b338"
             ]
         ]
     },
     {
-        "id": "c8983872.56b07",
+        "id": "f86ba9d1.242898",
         "type": "ui_text_input",
-        "z": "90a28baa.e90c08",
+        "z": "477a9344.f72e0c",
         "name": "",
         "label": "New Name",
-        "group": "159c11ae.4dd906",
+        "group": "3d736442.beff1c",
         "order": 4,
         "width": 0,
         "height": 0,
@@ -3201,14 +2431,14 @@
         "y": 200,
         "wires": [
             [
-                "7c27eec1.dae32"
+                "68d6c502.bf1abc"
             ]
         ]
     },
     {
-        "id": "3e94d8c.4162828",
+        "id": "1dcf01b5.e4196e",
         "type": "mqtt out",
-        "z": "90a28baa.e90c08",
+        "z": "477a9344.f72e0c",
         "name": "zigbee2mqtt/in Rename",
         "topic": "zigbee2mqtt/bridge/config/rename",
         "qos": "",
@@ -3218,15 +2448,15 @@
         "userProps": "",
         "correl": "",
         "expiry": "",
-        "broker": "d5951e14.94c918",
+        "broker": "d0d6034f.68aa08",
         "x": 1010,
         "y": 140,
         "wires": []
     },
     {
-        "id": "2f7689a.e3926f6",
+        "id": "eee20b42.707698",
         "type": "function",
-        "z": "90a28baa.e90c08",
+        "z": "477a9344.f72e0c",
         "name": "Format Data",
         "func": "flow.set('oldname',msg.payload.old);",
         "outputs": 1,
@@ -3238,9 +2468,9 @@
         ]
     },
     {
-        "id": "439d03a6.67519c",
+        "id": "f7fd7851.a9b338",
         "type": "change",
-        "z": "90a28baa.e90c08",
+        "z": "477a9344.f72e0c",
         "name": "change msg old",
         "rules": [
             {
@@ -3260,14 +2490,14 @@
         "y": 140,
         "wires": [
             [
-                "2f7689a.e3926f6"
+                "eee20b42.707698"
             ]
         ]
     },
     {
-        "id": "7c27eec1.dae32",
+        "id": "68d6c502.bf1abc",
         "type": "change",
-        "z": "90a28baa.e90c08",
+        "z": "477a9344.f72e0c",
         "name": "change msg new",
         "rules": [
             {
@@ -3287,14 +2517,14 @@
         "y": 200,
         "wires": [
             [
-                "ac8cedb2.584828"
+                "b029f1eb.7f1f88"
             ]
         ]
     },
     {
-        "id": "899a5f30.52695",
+        "id": "96921bd5.fc01f8",
         "type": "function",
-        "z": "90a28baa.e90c08",
+        "z": "477a9344.f72e0c",
         "name": "Format Data",
         "func": "var oldname = flow.get('oldname');\nvar newname = flow.get('newname');\n\nif (typeof oldname !== 'undefined' && oldname !== null && oldname !== \"\" && typeof newname !== 'undefined' && newname !== null && newname !== \"\"){\nmsg.payload = {\"old\": oldname, \"new\": newname}\n\n// Reset fields\noldname = \"\";\nnewname = \"\";\nflow.set('oldname',msg.payload.old);\nflow.set('newname',msg.payload.new);\n\nreturn msg;\n}",
         "outputs": 1,
@@ -3303,14 +2533,14 @@
         "y": 140,
         "wires": [
             [
-                "3e94d8c.4162828"
+                "1dcf01b5.e4196e"
             ]
         ]
     },
     {
-        "id": "ac8cedb2.584828",
+        "id": "b029f1eb.7f1f88",
         "type": "function",
-        "z": "90a28baa.e90c08",
+        "z": "477a9344.f72e0c",
         "name": "Format Data",
         "func": "flow.set('newname',msg.payload.new);",
         "outputs": 1,
@@ -3322,11 +2552,11 @@
         ]
     },
     {
-        "id": "89bc2f61.5bf458",
+        "id": "111a6405.2d93cc",
         "type": "ui_button",
-        "z": "90a28baa.e90c08",
+        "z": "477a9344.f72e0c",
         "name": "",
-        "group": "159c11ae.4dd906",
+        "group": "3d736442.beff1c",
         "order": 5,
         "width": 0,
         "height": 0,
@@ -3342,15 +2572,15 @@
         "y": 140,
         "wires": [
             [
-                "899a5f30.52695",
-                "8b683d92.cb3a1"
+                "96921bd5.fc01f8",
+                "80a5540c.a19d8"
             ]
         ]
     },
     {
-        "id": "c6d62c11.94da4",
+        "id": "6c7d6d73.30ebfc",
         "type": "ui_toast",
-        "z": "90a28baa.e90c08",
+        "z": "477a9344.f72e0c",
         "position": "top right",
         "displayTime": "5",
         "highlight": "",
@@ -3364,9 +2594,9 @@
         "wires": []
     },
     {
-        "id": "8b683d92.cb3a1",
+        "id": "80a5540c.a19d8",
         "type": "function",
-        "z": "90a28baa.e90c08",
+        "z": "477a9344.f72e0c",
         "name": "Notification",
         "func": "var oldname = flow.get('oldname');\nvar newname = flow.get('newname');\n\nif (typeof oldname !== 'undefined' && oldname !== null && oldname !== \"\" && typeof newname !== 'undefined' && newname !== null && newname !== \"\"){\nmsg.payload = (\"Rename Device: \" + oldname + \" to \" + newname);\nreturn msg;\n} else {\nmsg.payload = \"Enter device to rename\";\nreturn msg;\n}\n",
         "outputs": 1,
@@ -3375,114 +2605,14 @@
         "y": 200,
         "wires": [
             [
-                "c6d62c11.94da4"
+                "6c7d6d73.30ebfc"
             ]
         ]
     },
     {
-        "id": "c9ab8dc3.f00e",
-        "type": "subflow:90a28baa.e90c08",
-        "z": "14a538d3.c817bf",
-        "name": "",
-        "env": [],
-        "x": 550,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "757382c.daf2a7c",
-        "type": "subflow:89c7559f.91ddd8",
-        "z": "14a538d3.c817bf",
-        "name": "",
-        "env": [],
-        "x": 530,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "5de0c01b.193308",
-        "type": "subflow:15e83bbb.0c767c",
-        "z": "14a538d3.c817bf",
-        "name": "",
-        "env": [],
-        "x": 550,
-        "y": 360,
-        "wires": []
-    },
-    {
-        "id": "8885e0e1.696578",
-        "type": "comment",
-        "z": "14a538d3.c817bf",
-        "name": "Function",
-        "info": "",
-        "x": 530,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "2f0cf260.0f442e",
-        "type": "subflow:9a69d1a3.7d6db",
-        "z": "14a538d3.c817bf",
-        "name": "",
-        "env": [],
-        "x": 540,
-        "y": 400,
-        "wires": []
-    },
-    {
-        "id": "160985a5.e53f42",
-        "type": "subflow:12f9e98.5a8e317",
-        "z": "14a538d3.c817bf",
-        "name": "",
-        "env": [],
-        "x": 520,
-        "y": 440,
-        "wires": []
-    },
-    {
-        "id": "d7388a6d.8681c8",
-        "type": "subflow:70dc33e2.ff6b8c",
-        "z": "14a538d3.c817bf",
-        "name": "",
-        "env": [],
-        "x": 520,
-        "y": 480,
-        "wires": []
-    },
-    {
-        "id": "8cfda06d.8a7368",
-        "type": "comment",
-        "z": "14a538d3.c817bf",
-        "name": "Other",
-        "info": "",
-        "x": 780,
-        "y": 240,
-        "wires": []
-    },
-    {
-        "id": "7e466867.04bcb",
-        "type": "subflow:beb6d09d.90147",
-        "z": "14a538d3.c817bf",
-        "name": "",
-        "env": [],
-        "x": 820,
-        "y": 280,
-        "wires": []
-    },
-    {
-        "id": "bb22b825.eaff78",
-        "type": "subflow:8dd57283.d7602",
-        "z": "14a538d3.c817bf",
-        "name": "",
-        "env": [],
-        "x": 800,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "29432bf9.665d14",
+        "id": "20fd19f2.89b03e",
         "type": "debug",
-        "z": "2fbd42c0.d038ae",
+        "z": "559ca316.e374e4",
         "name": "Main Debug",
         "active": true,
         "tosidebar": true,
@@ -3492,14 +2622,14 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 910,
+        "x": 950,
         "y": 240,
         "wires": []
     },
     {
-        "id": "5b3dff02.91ebb",
+        "id": "a48d352f.91b488",
         "type": "function",
-        "z": "2fbd42c0.d038ae",
+        "z": "559ca316.e374e4",
         "name": "Generate Temps",
         "func": "var lat = [ 29.42, 30.26, 32.77, 36.37, 38.62, 39.09, 41.87, 43.03, 44.97, 41.25];\nvar lon = [-98.49,-97.74,-96.79,-94.20,-90.19,-94.57,-87.62,-87.90,-93.26,-95.99];\nvar randomTemp = (Math.random() * (30 - (20)) + (20)).toFixed(1);  //random temp from -5 to 30 degree\n\nvar timeIndex = Date.now();\n//This function below gets date and time and displays it via shortDate variable\nvar timeStamp = new Date().toLocaleTimeString();\nvar dateObj= new Date();\nvar newDate = dateObj.getFullYear() + '/' + ('0' + (dateObj.getMonth() + 1)).slice(-2) + '/' + ('0' + dateObj.getDate()).slice(-2) + ' <' + timeStamp + '>';\n\n// var month = ('0' + (dateObj.getMonth() + 1)).slice(-2);\n// var date = ('0' + dateObj.getDate()).slice(-2);\n// var year = dateObj.getFullYear();\n// var dateTime = year + '/' + month + '/' + date + ' <' + timeStamp + '>';\n\nvar idx = context.get('count') || 0;\n\nif( idx > 9 )\n{\n    idx = 0;  \n}\ncontext.set('count',idx+1); //store next idx for later\n\nmsg.payload = \n            {\n            info : {\n               uuid : timeIndex,\n               timeStamp: newDate,\n               company : \"SpatioData\",\n               avgTemp : randomTemp,\n               sensor : \"DHT22\"\n            }\n            };\n\n\nreturn msg;",
         "outputs": 1,
@@ -3511,17 +2641,16 @@
         "y": 260,
         "wires": [
             [
-                "3dd9a656.813ed2",
-                "77e02cb1.dc165c"
+                "bf603cef.b5132"
             ]
         ]
     },
     {
-        "id": "3dd9a656.813ed2",
+        "id": "be7b1cf9.ca3238",
         "type": "mqtt out",
-        "z": "2fbd42c0.d038ae",
+        "z": "559ca316.e374e4",
         "name": "mqtt - CC2530",
-        "topic": "testsak",
+        "topic": "mqtt",
         "qos": "",
         "retain": "",
         "respTopic": "",
@@ -3529,22 +2658,22 @@
         "userProps": "",
         "correl": "",
         "expiry": "",
-        "broker": "d5951e14.94c918",
-        "x": 780,
-        "y": 360,
+        "broker": "d0d6034f.68aa08",
+        "x": 700,
+        "y": 440,
         "wires": []
     },
     {
-        "id": "60a4cea6.695688",
+        "id": "825ea9fa.436b2",
         "type": "inject",
-        "z": "2fbd42c0.d038ae",
+        "z": "559ca316.e374e4",
         "name": "",
         "props": [
             {
                 "p": "payload"
             }
         ],
-        "repeat": "60",
+        "repeat": "6",
         "crontab": "",
         "once": true,
         "onceDelay": 0.1,
@@ -3555,14 +2684,14 @@
         "y": 240,
         "wires": [
             [
-                "5b3dff02.91ebb"
+                "a48d352f.91b488"
             ]
         ]
     },
     {
-        "id": "77e02cb1.dc165c",
+        "id": "bf603cef.b5132",
         "type": "function",
-        "z": "2fbd42c0.d038ae",
+        "z": "559ca316.e374e4",
         "name": "Get Temps",
         "func": "msg.payload = {\n    uuid : msg.payload.info.uuid,\n    sensors : \"DHT22\",\n    temperature: parseFloat(msg.payload.info.avgTemp),\n    \n}\n\nreturn msg;",
         "outputs": 1,
@@ -3570,19 +2699,20 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 690,
+        "x": 650,
         "y": 260,
         "wires": [
             [
-                "29432bf9.665d14",
-                "2f8e8207.e7ba1e"
+                "20fd19f2.89b03e",
+                "4f8598ff.dc9e88",
+                "3ef90e66.29393a"
             ]
         ]
     },
     {
-        "id": "12b0eabe.d0ceed",
+        "id": "4f8598ff.dc9e88",
         "type": "ui_chart",
-        "z": "2fbd42c0.d038ae",
+        "z": "559ca316.e374e4",
         "name": "",
         "group": "420ea789.f9e278",
         "order": 4,
@@ -3616,19 +2746,19 @@
         ],
         "useOldStyle": false,
         "outputs": 1,
-        "x": 1090,
+        "x": 970,
         "y": 180,
         "wires": [
             []
         ]
     },
     {
-        "id": "2f8e8207.e7ba1e",
+        "id": "3ef90e66.29393a",
         "type": "influxdb out",
-        "z": "2fbd42c0.d038ae",
-        "influxdb": "c21ccac0.37f0a8",
+        "z": "559ca316.e374e4",
+        "influxdb": "b832d5e6.69526",
         "name": "",
-        "measurement": "test_temps",
+        "measurement": "dht22_temperature",
         "precision": "",
         "retentionPolicy": "",
         "database": "database",
@@ -3636,8 +2766,145 @@
         "retentionPolicyV18Flux": "",
         "org": "organisation",
         "bucket": "bucket",
-        "x": 940,
-        "y": 300,
+        "x": 990,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "eb9edcf5.50e068",
+        "type": "inject",
+        "z": "d7bc3fab.7a4e8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "ON",
+        "payloadType": "str",
+        "x": 430,
+        "y": 80,
+        "wires": [
+            [
+                "f2d7da76.41612"
+            ]
+        ]
+    },
+    {
+        "id": "ec20cd63.a0eea",
+        "type": "unipi-input",
+        "z": "d7bc3fab.7a4e8",
+        "name": "DI 1.4",
+        "alias": "",
+        "devices": "input",
+        "circuits": "1.04",
+        "property": "value",
+        "seedev": "1",
+        "seecirc": "1",
+        "seeorig": "1",
+        "x": 570,
+        "y": 380,
+        "wires": [
+            [
+                "51c00d2a.40ea54"
+            ]
+        ]
+    },
+    {
+        "id": "b937a609.f53998",
+        "type": "ui_text",
+        "z": "d7bc3fab.7a4e8",
+        "group": "420ea789.f9e278",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "DI 1.4",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "x": 1049,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "107f0f3d.54f549",
+        "type": "inject",
+        "z": "d7bc3fab.7a4e8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "OFF",
+        "payloadType": "str",
+        "x": 570,
+        "y": 160,
+        "wires": [
+            [
+                "f2d7da76.41612"
+            ]
+        ]
+    },
+    {
+        "id": "f2d7da76.41612",
+        "type": "switch",
+        "z": "d7bc3fab.7a4e8",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "ON",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "OFF",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 770,
+        "y": 180,
+        "wires": [
+            [
+                "ff7f2b77.f2973"
+            ],
+            [
+                "ff7f2b77.f2973"
+            ]
+        ]
+    },
+    {
+        "id": "e650a48e.42d678",
+        "type": "influxdb out",
+        "z": "d7bc3fab.7a4e8",
+        "influxdb": "b832d5e6.69526",
+        "name": "",
+        "measurement": "unipi_digital_outputs",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "organisation",
+        "bucket": "bucket",
+        "x": 1970,
+        "y": 540,
         "wires": []
     }
 ]

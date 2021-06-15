@@ -1,0 +1,281 @@
+{
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": "-- Grafana --",
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "gnetId": null,
+    "graphTooltip": 0,
+    "id": 1,
+    "links": [],
+    "panels": [
+      {
+        "datasource": null,
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "custom": {
+              "fillOpacity": 70,
+              "lineWidth": 1
+            },
+            "mappings": [
+              {
+                "options": {
+                  "0": {
+                    "color": "red",
+                    "index": 0,
+                    "text": "OFF"
+                  },
+                  "1": {
+                    "color": "blue",
+                    "index": 1,
+                    "text": "ON"
+                  },
+                  "Garage Lights": {
+                    "color": "purple",
+                    "index": 3,
+                    "text": "Lights Garage"
+                  },
+                  "Outdoor Lights": {
+                    "color": "rgba(227, 139, 34, 1)",
+                    "index": 4,
+                    "text": "Lights Outdoor"
+                  },
+                  "lights bedroom": {
+                    "color": "yellow",
+                    "index": 2,
+                    "text": "Lights Bedrooms"
+                  }
+                },
+                "type": "value"
+              }
+            ],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 0
+                }
+              ]
+            },
+            "unit": "string"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 10,
+          "w": 23,
+          "x": 0,
+          "y": 0
+        },
+        "id": 4,
+        "maxDataPoints": 100,
+        "options": {
+          "colWidth": 0.9,
+          "legend": {
+            "displayMode": "list",
+            "placement": "bottom"
+          },
+          "rowHeight": 0.9,
+          "showValue": "auto",
+          "tooltip": {
+            "mode": "single"
+          }
+        },
+        "targets": [
+          {
+            "groupBy": [
+              {
+                "params": [
+                  "$__interval"
+                ],
+                "type": "time"
+              },
+              {
+                "params": [
+                  "null"
+                ],
+                "type": "fill"
+              }
+            ],
+            "measurement": "unipi_digital_outputs",
+            "orderByTime": "ASC",
+            "policy": "default",
+            "refId": "A",
+            "resultFormat": "time_series",
+            "select": [
+              [
+                {
+                  "params": [
+                    "value"
+                  ],
+                  "type": "field"
+                },
+                {
+                  "params": [],
+                  "type": "first"
+                }
+              ],
+              [
+                {
+                  "params": [
+                    "name"
+                  ],
+                  "type": "field"
+                },
+                {
+                  "params": [],
+                  "type": "first"
+                }
+              ],
+              [
+                {
+                  "params": [
+                    "unipi_name"
+                  ],
+                  "type": "field"
+                },
+                {
+                  "params": [],
+                  "type": "first"
+                }
+              ]
+            ],
+            "tags": []
+          }
+        ],
+        "title": "Unipi - Digital Outputs",
+        "transparent": true,
+        "type": "status-history"
+      },
+      {
+        "datasource": null,
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "drawStyle": "line",
+              "fillOpacity": 100,
+              "gradientMode": "hue",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineInterpolation": "smooth",
+              "lineStyle": {
+                "fill": "solid"
+              },
+              "lineWidth": 5,
+              "pointSize": 1,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "line"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 30
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 21,
+          "w": 19,
+          "x": 0,
+          "y": 10
+        },
+        "id": 2,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom"
+          },
+          "tooltip": {
+            "mode": "single"
+          }
+        },
+        "targets": [
+          {
+            "groupBy": [],
+            "measurement": "dht22_temperature",
+            "orderByTime": "ASC",
+            "policy": "default",
+            "refId": "A",
+            "resultFormat": "time_series",
+            "select": [
+              [
+                {
+                  "params": [
+                    "temperature"
+                  ],
+                  "type": "field"
+                }
+              ]
+            ],
+            "tags": []
+          }
+        ],
+        "title": "DHT22 - Temperature",
+        "transparent": true,
+        "type": "timeseries"
+      }
+    ],
+    "refresh": false,
+    "schemaVersion": 30,
+    "style": "dark",
+    "tags": [],
+    "templating": {
+      "list": []
+    },
+    "time": {
+      "from": "now-5m",
+      "to": "now"
+    },
+    "timepicker": {},
+    "timezone": "",
+    "title": "Unipi - Nodered",
+    "uid": "9oQl2dR7k",
+    "version": 3
+  }
